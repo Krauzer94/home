@@ -1,5 +1,3 @@
-# Testing
-
 ## Flatseal
  1. `xdg-config/gtk-3.0:ro`
  2. `xdg-config/MangoHud:ro`

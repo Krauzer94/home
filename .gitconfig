@@ -1,0 +1,11 @@
+[user]
+	name = KrauzerPH94
+	email = 13894059+KrauzerPH94@users.noreply.github.com
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[pull]
+	rebase = false
+[core]
+	editor = com.visualstudio.code --wait
