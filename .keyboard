@@ -101,7 +101,7 @@ Uuid={ce9d9f77-ed97-479f-9101-1781fefd5e22}
 ActionsCount=1
 
 [Data_1_1Actions0]
-CommandURL=flatpak run com.visualstudio.code .Repos
+CommandURL=flatpak run com.visualstudio.code Repos
 Type=COMMAND_URL
 
 [Data_1_1Conditions]
