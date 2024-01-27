@@ -9,4 +9,3 @@
 	rebase = false
 [core]
 	editor = com.visualstudio.code --wait
-#1123
