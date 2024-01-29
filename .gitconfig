@@ -8,4 +8,4 @@
 [pull]
 	rebase = false
 [core]
-	editor = com.visualstudio.code --wait
+	editor = kwrite

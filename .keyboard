@@ -3,7 +3,7 @@ DataCount=1
 
 [Data_1]
 Comment=Comment
-DataCount=9
+DataCount=10
 Enabled=true
 Name=Personal Custom
 SystemGroup=0
@@ -16,14 +16,40 @@ ConditionsCount=0
 [Data_1_1]
 Comment=Comment
 Enabled=true
-Name=Repos
+Name=Steam
 Type=SIMPLE_ACTION_DATA
+
+[Data_1_10]
+Comment=Comment
+Enabled=true
+Name=FFmpeg Fade
+Type=SIMPLE_ACTION_DATA
+
+[Data_1_10Actions]
+ActionsCount=1
+
+[Data_1_10Actions0]
+CommandURL=ffmpeg -i $HOME/Videos/1.mp4 -vf 'fade=t=in:st=0:d=1,fade=t=out:st=19:d=1' -af 'afade=t=in:st=0:d=1,afade=t=out:st=19:d=1' $HOME/Videos/0.mp4
+Type=COMMAND_URL
+
+[Data_1_10Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_1_10Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_1_10Triggers0]
+Key=Meta+Shift+F
+Type=SHORTCUT
+Uuid={ce9d9f77-ed97-479f-9101-1781fefd5e22}
 
 [Data_1_1Actions]
 ActionsCount=1
 
 [Data_1_1Actions0]
-CommandURL=flatpak run com.visualstudio.code Repos
+CommandURL=dolphin $HOME/.var/app/com.valvesoftware.Steam/.local/share/applications/
 Type=COMMAND_URL
 
 [Data_1_1Conditions]
@@ -35,21 +61,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_1Triggers0]
-Key=Meta+Shift+P
+Key=Meta+Shift+V
 Type=SHORTCUT
-Uuid={63c1ae39-4380-4334-b548-d9d2dbeeb807}
+Uuid={b77908fa-969d-49ac-a4c6-81b37874cb5d}
 
 [Data_1_2]
 Comment=Comment
 Enabled=true
-Name=Flameshot
+Name=Repos
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_2Actions]
 ActionsCount=1
 
 [Data_1_2Actions0]
-CommandURL=flatpak run org.flameshot.Flameshot gui
+CommandURL=flatpak run com.visualstudio.code Repos
 Type=COMMAND_URL
 
 [Data_1_2Conditions]
@@ -61,21 +87,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_2Triggers0]
-Key=Meta+Shift+Print
+Key=Meta+Shift+P
 Type=SHORTCUT
-Uuid={b0a3e791-deb9-4f4e-91b0-d8ebaf0f1673}
+Uuid={63c1ae39-4380-4334-b548-d9d2dbeeb807}
 
 [Data_1_3]
 Comment=Comment
 Enabled=true
-Name=Aliases
+Name=Flameshot
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_3Actions]
 ActionsCount=1
 
 [Data_1_3Actions0]
-CommandURL=flatpak run com.visualstudio.code .bash_aliases
+CommandURL=flatpak run org.flameshot.Flameshot gui
 Type=COMMAND_URL
 
 [Data_1_3Conditions]
@@ -87,21 +113,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_3Triggers0]
-Key=Meta+Shift+A
+Key=Meta+Shift+Print
 Type=SHORTCUT
-Uuid={1c12ba75-5380-4ee8-83e3-87dcb716549d}
+Uuid={b0a3e791-deb9-4f4e-91b0-d8ebaf0f1673}
 
 [Data_1_4]
 Comment=Comment
 Enabled=true
-Name=MangoHud
+Name=Aliases
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_4Actions]
 ActionsCount=1
 
 [Data_1_4Actions0]
-CommandURL=kwrite $HOME/.config/MangoHud/MangoHud.conf
+CommandURL=flatpak run com.visualstudio.code .bash_aliases
 Type=COMMAND_URL
 
 [Data_1_4Conditions]
@@ -113,21 +139,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_4Triggers0]
-Key=Meta+Shift+H
+Key=Meta+Shift+A
 Type=SHORTCUT
-Uuid={8da14099-a150-48f9-aaad-892ae9865ff8}
+Uuid={1c12ba75-5380-4ee8-83e3-87dcb716549d}
 
 [Data_1_5]
 Comment=Comment
 Enabled=true
-Name=Desktop
+Name=MangoHud
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_5Actions]
 ActionsCount=1
 
 [Data_1_5Actions0]
-CommandURL=dolphin $HOME/.local/share/applications
+CommandURL=kwrite $HOME/.config/MangoHud/MangoHud.conf
 Type=COMMAND_URL
 
 [Data_1_5Conditions]
@@ -139,21 +165,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_5Triggers0]
-Key=Meta+Shift+D
+Key=Meta+Shift+H
 Type=SHORTCUT
-Uuid={84764098-5464-4edb-98b5-11cad97212c4}
+Uuid={8da14099-a150-48f9-aaad-892ae9865ff8}
 
 [Data_1_6]
 Comment=Comment
 Enabled=true
-Name=System Monitor
+Name=Desktop
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_6Actions]
 ActionsCount=1
 
 [Data_1_6Actions0]
-CommandURL=plasma-systemmonitor
+CommandURL=dolphin $HOME/.local/share/applications
 Type=COMMAND_URL
 
 [Data_1_6Conditions]
@@ -165,21 +191,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_6Triggers0]
-Key=Ctrl+Shift+Esc
+Key=Meta+Shift+D
 Type=SHORTCUT
-Uuid={56fdd3ef-572a-4ab9-b8df-803775b05057}
+Uuid={84764098-5464-4edb-98b5-11cad97212c4}
 
 [Data_1_7]
 Comment=Comment
 Enabled=true
-Name=FFmpeg Merge
+Name=System Monitor
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_7Actions]
 ActionsCount=1
 
 [Data_1_7Actions0]
-CommandURL=ffmpeg -f concat -i $HOME/Videos/merge.txt -c copy $HOME/Videos/merged.mp4
+CommandURL=plasma-systemmonitor
 Type=COMMAND_URL
 
 [Data_1_7Conditions]
@@ -191,21 +217,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_7Triggers0]
-Key=Meta+Shift+M
+Key=Ctrl+Shift+Esc
 Type=SHORTCUT
-Uuid={6a8fa547-d729-4b10-80f7-cc13502c6873}
+Uuid={56fdd3ef-572a-4ab9-b8df-803775b05057}
 
 [Data_1_8]
 Comment=Comment
 Enabled=true
-Name=FFmpeg Trim
+Name=FFmpeg Merge
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_8Actions]
 ActionsCount=1
 
 [Data_1_8Actions0]
-CommandURL=ffmpeg -ss 10 -i $HOME/Videos/2.mp4 -t 20 -c copy $HOME/Videos/1.mp4
+CommandURL=ffmpeg -f concat -i $HOME/Videos/merge.txt -c copy $HOME/Videos/merged.mp4
 Type=COMMAND_URL
 
 [Data_1_8Conditions]
@@ -217,21 +243,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_8Triggers0]
-Key=Meta+Shift+T
+Key=Meta+Shift+M
 Type=SHORTCUT
-Uuid={d451ca9b-c32d-4a5c-8b0d-58fe233c2a59}
+Uuid={6a8fa547-d729-4b10-80f7-cc13502c6873}
 
 [Data_1_9]
 Comment=Comment
 Enabled=true
-Name=FFmpeg Fade
+Name=FFmpeg Trim
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_9Actions]
 ActionsCount=1
 
 [Data_1_9Actions0]
-CommandURL=ffmpeg -i $HOME/Videos/1.mp4 -vf 'fade=t=in:st=0:d=1,fade=t=out:st=19:d=1' -af 'afade=t=in:st=0:d=1,afade=t=out:st=19:d=1' $HOME/Videos/0.mp4
+CommandURL=ffmpeg -ss 10 -i $HOME/Videos/2.mp4 -t 20 -c copy $HOME/Videos/1.mp4
 Type=COMMAND_URL
 
 [Data_1_9Conditions]
@@ -243,9 +269,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_9Triggers0]
-Key=Meta+Shift+F
+Key=Meta+Shift+T
 Type=SHORTCUT
-Uuid={ce9d9f77-ed97-479f-9101-1781fefd5e22}
+Uuid={d451ca9b-c32d-4a5c-8b0d-58fe233c2a59}
 
 [Main]
 AllowMerge=false
