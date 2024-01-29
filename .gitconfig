@@ -8,4 +8,4 @@
 [pull]
 	rebase = false
 [core]
-	editor = kwrite
+	editor = flatpak run com.visualstudio.code --wait
