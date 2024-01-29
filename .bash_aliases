@@ -19,15 +19,6 @@ alias neofetch='bash .neofetch.sh'
 alias video='bash .video-editing.sh'
 alias code='flatpak run com.visualstudio.code'
 
-# Keyboard shortcuts
-alias steam='dolphin $HOME/.var/app/com.valvesoftware.Steam/.local/share/applications/'
-alias repos='flatpak run com.visualstudio.code Repos'
-alias flameshot='flatpak run org.flameshot.Flameshot gui'
-alias aliases='flatpak run com.visualstudio.code .bash_aliases'
-alias hud='kwrite $HOME/.config/MangoHud/MangoHud.conf'
-alias desktop='dolphin $HOME/.local/share/applications'
-alias monitor='plasma-systemmonitor'
-
 # FFmpeg aliases
 alias trim='ffmpeg -ss 10 -i $HOME/Videos/2.mp4 -t 20 -c copy $HOME/Videos/1.mp4'
 alias fade='ffmpeg -i $HOME/Videos/1.mp4 -vf 'fade=t=in:st=0:d=1,fade=t=out:st=19:d=1' -af 'afade=t=in:st=0:d=1,afade=t=out:st=19:d=1' $HOME/Videos/0.mp4'
