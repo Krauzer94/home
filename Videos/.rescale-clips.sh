@@ -8,7 +8,7 @@ for f in *.mp4; do
     ((counter++))
 done
 
-# Trim and fade
+# Rescale to 720p
 for f in *.mp4; do
     `# Rescale to 720p` ffmpeg -i $f -vf "scale=1280:720" \
     `# Output file` 'scaled_'$f -y
