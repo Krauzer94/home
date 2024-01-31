@@ -3,6 +3,7 @@
  2. `xdg-config/MangoHud:ro`
  3. `~/Music`
  4. `~/Games`
+ 5. `MANGOHUD=1`
 ---
 
 ## NVIDIA
