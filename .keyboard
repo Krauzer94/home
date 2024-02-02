@@ -29,7 +29,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_1_10Actions0]
-CommandURL=ffmpeg -i $HOME/Videos/1.mp4 -vf 'fade=t=in:st=0:d=1,fade=t=out:st=19:d=1' -af 'afade=t=in:st=0:d=1,afade=t=out:st=19:d=1' $HOME/Videos/0.mp4
+CommandURL=ffmpeg -i $HOME/Videos/1.mp4 -vf 'fade=t=in:st=0:d=1,fade=t=out:st=19:d=1' -af 'afade=t=in:st=0:d=1,afade=t=out:st=19:d=1' $HOME/Videos/0.mp4  && rm $HOME/Videos/2.mp4 $HOME/Videos/1.mp4
 Type=COMMAND_URL
 
 [Data_1_10Conditions]
@@ -224,14 +224,14 @@ Uuid={56fdd3ef-572a-4ab9-b8df-803775b05057}
 [Data_1_8]
 Comment=Comment
 Enabled=true
-Name=FFmpeg Edit
+Name=FFmpeg Merge
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_8Actions]
 ActionsCount=1
 
 [Data_1_8Actions0]
-CommandURL=ffmpeg -i $HOME/Videos/2.mp4 -ss 10 -t 20 -vf 'fade=t=in:st=0:d=1,fade=t=out:st=19:d=1' -af 'afade=t=in:st=0:d=1,afade=t=out:st=19:d=1' $HOME/Videos/1.mp4 -y && rm $HOME/Videos/2.mp4
+CommandURL=ffmpeg -f concat -i $HOME/Videos/merge.txt -c copy $HOME/Videos/merged.mp4
 Type=COMMAND_URL
 
 [Data_1_8Conditions]
