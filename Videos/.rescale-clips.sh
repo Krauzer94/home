@@ -8,9 +8,9 @@ for f in *.mp4; do
     ((counter++))
 done
 
-# Rescale to 720p
+# Rescale to 1080p
 for f in *.mp4; do
-    `# Rescale to 720p` ffmpeg -i $f -vf "scale=1280:720" \
+    `# Rescale to 1080p` ffmpeg -i $f -vf "scale=1920:1080" \
     `# Output file` 'scaled_'$f -y
     rm $f;
 done
