@@ -8,9 +8,12 @@ for f in *.mp4; do
     ((counter++))
 done
 
+# Cropp to fill
+for f in *.mp4; do
+    ffmpeg -i "$f" -vf "crop=1280:720:0:42" "cropped_$f" -y && rm "$f";
+done
+
 # Rescale to 1080p
 for f in *.mp4; do
-    `# Rescale to 1080p` ffmpeg -i $f -vf "scale=1920:1080" \
-    `# Output file` 'scaled_'$f -y
-    rm $f;
+    ffmpeg -i "$f" -vf "scale=1920:1080" "scaled_$f" -y && rm "$f";
 done
