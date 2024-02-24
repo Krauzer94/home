@@ -10,7 +10,7 @@ done
 
 # Cropp to fill
 for f in *.mp4; do
-    ffmpeg -i "$f" -vf "crop=1280:720:0:42" "cropped_$f" -y && rm "$f";
+    ffmpeg -i "$f" -vf "crop=1280:720:0:40" "cropped_$f" -y && rm "$f";
 done
 
 # Rescale to 1080p
