@@ -8,6 +8,16 @@ for f in *.mp4; do
     ((counter++))
 done
 
+# Cropp to fill
+for f in *.mp4; do
+    ffmpeg -i "$f" -vf "crop=1280:720:0:40" "cropped_$f" -y && rm "$f";
+done
+
+# Rescale to 1080p
+for f in *.mp4; do
+    ffmpeg -i "$f" -vf "scale=1920:1080" "scaled_$f" -y && rm "$f";
+done
+
 # Trim and fade
 for f in *.mp4; do
     `# Trim 20 seconds` ffmpeg -ss 10 -i $f -t 20 \
