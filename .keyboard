@@ -257,7 +257,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_1_9Actions0]
-CommandURL=ffmpeg -i $HOME/Videos/2.mp4 -ss 10 -t 20 -c copy $HOME/Videos/1.mp4
+CommandURL=ffmpeg -ss 10 -i $HOME/Videos/2.mp4 -t 20 -c copy $HOME/Videos/1.mp4
 Type=COMMAND_URL
 
 [Data_1_9Conditions]

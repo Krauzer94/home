@@ -24,7 +24,7 @@ alias scale='bash .rescale-clips.sh'
 alias code='flatpak run com.visualstudio.code'
 
 # FFmpeg aliases
-alias trim='ffmpeg -i $HOME/Videos/2.mp4 -ss 10 -t 20 -c copy $HOME/Videos/1.mp4'
+alias trim='ffmpeg -ss 10 -i $HOME/Videos/2.mp4 -t 20 -c copy $HOME/Videos/1.mp4'
 alias fade='ffmpeg -i $HOME/Videos/1.mp4 -vf 'fade=t=in:st=0:d=1,fade=t=out:st=19:d=1' -af 'afade=t=in:st=0:d=1,afade=t=out:st=19:d=1' $HOME/Videos/0.mp4 && rm $HOME/Videos/2.mp4 $HOME/Videos/1.mp4'
 alias merge='ffmpeg -f concat -i $HOME/Videos/merge.txt -c copy $HOME/Videos/merged.mp4'
 alias compress='ffmpeg -i $HOME/Videos/1.mp4 -vcodec libx265 -crf 28 $HOME/Videos/compressed.mp4'
