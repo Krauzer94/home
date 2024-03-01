@@ -7,7 +7,5 @@
 	ui = auto
 [pull]
 	rebase = false
-[fetch]
-	autoDownload = true
 [core]
 	editor = flatpak run com.visualstudio.code --wait
