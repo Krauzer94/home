@@ -9,9 +9,7 @@ alias add1='git commit'
 alias commit='add0 && add1'
 alias push='git push'
 alias log='git log -1'
-alias pull0='git fetch'
-alias pull1='git pull'
-alias pull='pull0 && pull1'
+alias pull='git pull'
 
 # Other aliases
 alias ll='ls -l'
