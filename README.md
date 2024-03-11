@@ -6,6 +6,10 @@
  5. `MANGOHUD=1`
 ---
 
+## DualShock 3
+1. [Arch Wiki > Gamepad > 3.12.2 Pairing via Bluetooth ](https://wiki.archlinux.org/title/Gamepad#Pairing_via_Bluetooth)
+2. [Gentoo Wiki > DualShock > Bluetooth > DualShock 3](https://wiki.gentoo.org/wiki/Sony_DualShock#DualShock_3)
+
 ## NVIDIA
 1. Run the command: `sudo nvidia-settings`
 2. Enable "Force Full Composition Pipeline";
