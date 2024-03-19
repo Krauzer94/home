@@ -1,3 +1,3 @@
 git add .
-git commit -m "Save game uplad"
+git commit -m "Save game upload"
 git push
