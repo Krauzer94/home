@@ -1,8 +1,7 @@
 #!/bin/bash
-# Rename counter
-counter=1
 
 # Rename clips
+counter=1
 for f in *.mp4; do
     mv "$f" "${counter}.mp4"
     ((counter++))

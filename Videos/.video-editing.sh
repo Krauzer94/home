@@ -1,16 +1,10 @@
 #!/bin/bash
-# Rename counter
-counter=1
 
 # Rename clips
+counter=1
 for f in *.mp4; do
     mv "$f" "${counter}.mp4"
     ((counter++))
-done
-
-# Rescale to 1080p
-for f in *.mp4; do
-    ffmpeg -i "$f" -vf "scale=1920:1080" -b:v 6000k "scaled_$f" -y && rm "$f";
 done
 
 # Trim and fade
@@ -22,8 +16,25 @@ for f in *.mp4; do
     rm $f;
 done
 
-# Concat text file
-for f in edited_*; do echo "file '$f'" >> merge.txt; done
+# Create intermediate
+counter=1
+for f in *.mp4; do
+    ffmpeg -i "$f" -c copy "intermediate_${counter}.ts" && rm $f;
+    ((counter++))
+done
 
-# Merge all clips
-ffmpeg -f concat -i merge.txt -c copy video.mp4
+# Filename array
+files=($(find . -type f -name "*.ts"))
+concat_list=$(printf "concat:%s|" "${files[@]}")
+concat_list=${concat_list%|}
+
+# Merge all videos
+ffmpeg -i "$concat_list" -c copy merged.mp4
+
+# Rescale to 1080p
+ffmpeg -i merged.mp4 -vf "scale=1920:1080" -b:v 6000k video.mp4 -y && rm merged.mp4
+
+# Delete intermediates
+for f in *.ts; do
+    rm $f;
+done
