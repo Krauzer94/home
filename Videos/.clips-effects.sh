@@ -9,7 +9,7 @@ done
 
 # Rescale to 1080p
 for f in *.mp4; do
-    ffmpeg -i "$f" -vf "scale=1920:1080" -b:v 6000k "scaled_$f" -y && rm "$f";
+    ffmpeg -i "$f" -vf "scale=1920:1080" -b:v 6000k "scaled_$f" -y && rm "$f"
 done
 
 # Apply video effects
