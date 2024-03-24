@@ -9,17 +9,16 @@ done
 
 # Trim and fade
 for f in *.mp4; do
-    `# Trim 20 seconds` ffmpeg -ss 10 -i $f -t 20 \
-    `# Video fade 1sec` -vf 'fade=t=in:st=0:d=1,fade=t=out:st=19:d=1' \
-    `# Audio fade 1sec` -af 'afade=t=in:st=0:d=1,afade=t=out:st=19:d=1' \
-    `# Output file` -b:v 6000k 'edited_'$f -y
-    rm $f;
+    ffmpeg -ss 10 -i "$f" -t 20 \
+    -vf 'fade=t=in:st=0:d=1,fade=t=out:st=19:d=1' \
+    -af 'afade=t=in:st=0:d=1,afade=t=out:st=19:d=1' \
+    -b:v 6000k "edited_"$f -y && rm "$f"
 done
 
 # Create intermediate
 counter=1
 for f in *.mp4; do
-    ffmpeg -i "$f" -c copy "intermediate_${counter}.ts" && rm $f;
+    ffmpeg -i "$f" -c copy "intermediate_${counter}.ts" && rm "$f"
     ((counter++))
 done
 
@@ -36,5 +35,5 @@ ffmpeg -i merged.mp4 -vf "scale=1920:1080" -b:v 6000k video.mp4 -y && rm merged.
 
 # Delete intermediates
 for f in *.ts; do
-    rm $f;
+    rm "$f"
 done
