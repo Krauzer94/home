@@ -20,7 +20,6 @@ alias flrun='flatpak list --runtime'
 alias neofetch='sh $HOME/.neofetch.sh'
 alias code='flatpak run com.visualstudio.code'
 alias save='sh $HOME/.dotfiles/save_upload.sh'
-alias pastebin='sh $HOME/.dotfiles/pastebin_url.sh'
 
 # Video editing
 alias video='sh .video-editing.sh'
