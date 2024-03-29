@@ -24,3 +24,7 @@ alias save='sh $HOME/.dotfiles/save_upload.sh'
 # Video editing
 alias video='sh .video-editing.sh'
 alias clip='sh .clips-editing.sh'
+
+# DualShock 3
+alias pair='sh $HOME/.dotfiles/dshock3_pair.sh'
+alias connect='sh $HOME/.dotfiles/dshock3_conn.sh'
