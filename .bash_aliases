@@ -24,4 +24,3 @@ alias save='sh $HOME/.dotfiles/save_upload.sh'
 # Video editing
 alias video='sh .video-editing.sh'
 alias clip='sh .clips-editing.sh'
-alias fade='sh .clips-effects.sh'
