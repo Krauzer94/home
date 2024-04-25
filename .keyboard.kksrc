@@ -1,0 +1,17 @@
+[dolphin.desktop][Global Shortcuts]
+_launch=Meta+Shift+D
+
+[flatpak-2.desktop][Global Shortcuts]
+_launch=Meta+Shift+Print
+
+[flatpak-3.desktop][Global Shortcuts]
+_launch=Meta+Shift+A
+
+[flatpak.desktop][Global Shortcuts]
+_launch=Meta+Shift+P
+
+[kwrite.desktop][Global Shortcuts]
+_launch=Meta+Shift+H
+
+[plasma-systemmonitor.desktop][Global Shortcuts]
+_launch=Ctrl+Shift+Esc
