@@ -10,6 +10,9 @@ _launch=Meta+Shift+A
 [flatpak.desktop][Global Shortcuts]
 _launch=Meta+Shift+P
 
+[killall.desktop][Global Shortcuts]
+_launch=Num+*
+
 [kwrite.desktop][Global Shortcuts]
 _launch=Meta+Shift+H
 
