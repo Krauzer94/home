@@ -9,7 +9,7 @@ done
 
 # Rescale to 1080p
 for f in *.mp4; do
-    ffmpeg -i "$f" -vf "scale=1920:1080" -b:v 6000k "scaled_$f" -y && rm "$f"
+    ffmpeg -i "$f" -vf "scale=1920:1080" "scaled_$f" -y && rm "$f"
 done
 
 # Apply video effects
@@ -28,7 +28,7 @@ apply_effects() {
     ffmpeg -i "$f" \
     -vf "fade=t=in:st=0:d=1,fade=t=out:st=$start:d=1" \
     -af "afade=t=in:st=0:d=1,afade=t=out:st=$start:d=1" \
-    -b:v 6000k "$edited" -y && rm "$f"
+    "$edited" -y && rm "$f"
 }
 
 # Edit all videos
