@@ -13,6 +13,9 @@ _launch=Meta+Shift+P
 [killall.desktop][Global Shortcuts]
 _launch=Num+*
 
+[kwrite-2.desktop][Global Shortcuts]
+_launch=Meta+Ctrl+H
+
 [kwrite.desktop][Global Shortcuts]
 _launch=Meta+Shift+H
 
