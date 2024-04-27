@@ -25,10 +25,3 @@ alias save='sh $HOME/.etc/save.sh'
 alias video='sh .video-editing.sh'
 alias clip='sh .clips-editing.sh'
 alias deck='sh .deck-twitter.sh'
-
-# Dotfiles scripts
-alias aliases-setup='sh $HOME/.dotfiles/aliases_setup.sh'
-alias flatpak-apps='sh $HOME/.dotfiles/flatpak_apps.sh'
-alias github-setup='sh $HOME/.dotfiles/github_setup.sh'
-alias neofetch-dot='sh $HOME/.dotfiles/neofetch_dot.sh'
-alias perm-theme='sh $HOME/.dotfiles/perm_theme.sh'
