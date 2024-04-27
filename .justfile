@@ -16,7 +16,7 @@ paste-rs:
 	echo -e '\n paste function added to to .bashrc\n'
 
 # User specific Bash aliases
-alias-setup:
+aliases:
 	#!/bin/bash
 
 	echo -e '\n Setting up the Bash Aliases file\n'
@@ -24,7 +24,7 @@ alias-setup:
 	echo -e '\n Bash Aliases setup finished\n'
 
 # Install SteamOS specific apps
-installs-steamos:
+steamos:
 	#!/bin/bash
 
 	echo -e '\n Installing all Flatpak apps\n'
@@ -45,10 +45,11 @@ installs-steamos:
 	flatpak install flathub net.davidotek.pupgui2 -y
 	flatpak install flathub net.lutris.Lutris -y
 	flatpak install flathub com.visualstudio.code -y
+	flatpak install flathub com.dec05eba.gpu_screen_recorder -y
 	echo -e '\n All Flatpak apps have been installed\n'
 
 # Install Fedora specific apps
-installs-fedora:
+fedora:
 	#!/bin/bash
 
 	echo -e '\n Installing all Flatpak apps\n'
@@ -71,10 +72,11 @@ installs-fedora:
 	flatpak install flathub net.davidotek.pupgui2 -y
 	flatpak install flathub net.lutris.Lutris -y
 	flatpak install flathub com.visualstudio.code -y
+	flatpak install flathub com.dec05eba.gpu_screen_recorder -y
 	echo -e '\n All Flatpak apps have been installed\n'
 
 # Install flatpak Mangohud app
-installs-mangohud:
+mangohud:
 	#!/bin/bash
 
 	echo -e '\n Installing MangoHud overlay\n'
@@ -82,7 +84,7 @@ installs-mangohud:
 	echo -e '\n Flatpak MangoHud app installed\n'
 
 # Set up git and GitHub account
-github-setup:
+github:
 	#!/bin/bash
 
 	echo -e '\n Generating a new SSH key\n'
@@ -94,7 +96,7 @@ github-setup:
 	echo -e '\n Git setup finished\n'
 
 # Set up portable neofetch app
-neofetch-dot:
+neofetch:
 	#!/bin/bash
 
 	echo -e '\n Setting up the Neofetch script\n'
@@ -103,7 +105,7 @@ neofetch-dot:
 	echo -e '\n Neofetch has finished installing\n'
 
 # Enable system theme for apps
-perm-theme:
+theming:
 	#!/bin/bash
 
 	echo -e '\n Managing the theme permissions\n'
