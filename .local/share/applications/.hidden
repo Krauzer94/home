@@ -3,8 +3,9 @@ flatpak.desktop
 flatpak-2.desktop
 flatpak-3.desktop
 kwrite.desktop
-plasma-systemmonitor.desktop
+kwrite-2.desktop
 killall.desktop
+plasma-systemmonitor.desktop
 
 discover_overlay_configure.desktop
 com.gerbilsoft.rom-properties.rp-config.desktop

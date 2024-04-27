@@ -1,0 +1,1 @@
+MANGOHUD_CONFIGFILE=$HOME/.config/MangoHud/MangoHud.conf mangohud %command%
