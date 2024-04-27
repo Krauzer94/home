@@ -22,6 +22,6 @@ alias code='flatpak run com.visualstudio.code'
 alias save='sh .save.sh'
 
 # Video editing
-alias video='sh .video-editing.sh'
-alias clip='sh .clips-editing.sh'
-alias deck='sh .deck-twitter.sh'
+alias video='just video'
+alias clip='just clip'
+alias deck='just deck'
