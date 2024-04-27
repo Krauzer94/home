@@ -6,7 +6,7 @@ default:
 	just --list
 
 # Fast data sharing pastebin
-paste-rs:
+setup-pasters:
 	#!/bin/bash
 
 	echo -e '\n Setting up the paste function\n'
@@ -14,7 +14,7 @@ paste-rs:
 	echo -e '\n paste function added to to .bashrc\n'
 
 # User specific Bash aliases
-aliases:
+setup-aliases:
 	#!/bin/bash
 
 	echo -e '\n Setting up the Bash Aliases file\n'
@@ -22,7 +22,7 @@ aliases:
 	echo -e '\n Bash Aliases setup finished\n'
 
 # Install SteamOS specific apps
-steamos:
+installs-steamos:
 	#!/bin/bash
 
 	echo -e '\n Installing all Flatpak apps\n'
@@ -47,7 +47,7 @@ steamos:
 	echo -e '\n All Flatpak apps have been installed\n'
 
 # Install Fedora specific apps
-fedora:
+installs-fedora:
 	#!/bin/bash
 
 	echo -e '\n Installing all Flatpak apps\n'
@@ -74,7 +74,7 @@ fedora:
 	echo -e '\n All Flatpak apps have been installed\n'
 
 # Install flatpak Mangohud app
-mangohud:
+installs-mangohud:
 	#!/bin/bash
 
 	echo -e '\n Installing MangoHud overlay\n'
@@ -82,7 +82,7 @@ mangohud:
 	echo -e '\n Flatpak MangoHud app installed\n'
 
 # Set up git and GitHub account
-github:
+setup-github:
 	#!/bin/bash
 
 	echo -e '\n Generating a new SSH key\n'
@@ -93,8 +93,8 @@ github:
 	flatpak run com.google.Chrome https://github.com/settings/keys
 	echo -e '\n Git setup finished\n'
 
-# Set up portable neofetch app
-neofetch:
+# Install portable Neofetch app
+installs-neofetch:
 	#!/bin/bash
 
 	echo -e '\n Setting up the Neofetch script\n'
@@ -103,7 +103,7 @@ neofetch:
 	echo -e '\n Neofetch has finished installing\n'
 
 # Enable system theme for apps
-theming:
+setup-theming:
 	#!/bin/bash
 
 	echo -e '\n Managing the theme permissions\n'
