@@ -1,4 +1,7 @@
-#import "/usr/share/ublue-os/justfile"
+import "/usr/share/ublue-os/justfile"
+
+# You can add your own commands here!
+# For documentation, see: https://ublue.it/guide/just/
 
 # User specific recipes list
 default:
@@ -111,5 +114,3 @@ perm-theme:
 	flatpak override --filesystem=$HOME/.themes
 	flatpak override --filesystem=$HOME/.icons
 	echo -e '\n Finished applying system themes\n'
-# You can add your own commands here! For documentation, see: https://ublue.it/guide/just/
-import "/usr/share/ublue-os/justfile"
