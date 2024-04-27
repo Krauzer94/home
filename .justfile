@@ -111,6 +111,6 @@ theming:
 	mkdir $HOME/.icons
 	cp -r /usr/share/themes/* $HOME/.themes/
 	cp -r /usr/share/icons/* $HOME/.icons/
-	flatpak override --filesystem=$HOME/.themes
-	flatpak override --filesystem=$HOME/.icons
+	flatpak override --user --filesystem=$HOME/.themes
+	flatpak override --user --filesystem=$HOME/.icons
 	echo -e '\n Finished applying system themes\n'
