@@ -1,6 +1,5 @@
 echo -e '\n Installing all Flatpak apps\n'
 flatpak install flathub com.google.Chrome -y
-flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub org.gimp.GIMP -y
 flatpak install flathub org.qbittorrent.qBittorrent -y
 flatpak install flathub org.videolan.VLC -y
@@ -19,6 +18,5 @@ flatpak install flathub com.github.tchx84.Flatseal -y
 flatpak install flathub net.davidotek.pupgui2 -y
 flatpak install flathub net.lutris.Lutris -y
 flatpak install flathub com.visualstudio.code -y
-flatpak install com.obsproject.Studio.Plugin.Gstreamer -y
 flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
 echo -e '\n All Flatpak apps have been installed\n'
