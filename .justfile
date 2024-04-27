@@ -114,11 +114,3 @@ perm-theme:
 	flatpak override --filesystem=$HOME/.themes
 	flatpak override --filesystem=$HOME/.icons
 	echo -e '\n Finished applying system themes\n'
-
-# Save game upload specific files
-save:
-	#!/bin/bash
-
-	git add .
-	git commit -m "Save game upload"
-	git push

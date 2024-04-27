@@ -19,8 +19,7 @@ alias flist='flatpak list --app'
 alias flrun='flatpak list --runtime'
 alias neofetch='sh $HOME/.neofetch.sh'
 alias code='flatpak run com.visualstudio.code'
-alias save0='sh $HOME/.etc/save.sh'
-alias save='just save'
+alias save='sh .save.sh'
 
 # Video editing
 alias video='sh .video-editing.sh'
