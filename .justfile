@@ -43,7 +43,7 @@ installs-steamos:
 	flatpak install flathub net.davidotek.pupgui2 -y
 	flatpak install flathub net.lutris.Lutris -y
 	flatpak install flathub com.visualstudio.code -y
-	flatpak install flathub com.dec05eba.gpu_screen_recorder -y
+	flatpak install flathub com.obsproject.Studio -y
 	echo -e '\n All Flatpak apps have been installed\n'
 
 # Install Fedora specific apps
@@ -70,7 +70,7 @@ installs-fedora:
 	flatpak install flathub net.davidotek.pupgui2 -y
 	flatpak install flathub net.lutris.Lutris -y
 	flatpak install flathub com.visualstudio.code -y
-	flatpak install flathub com.dec05eba.gpu_screen_recorder -y
+	flatpak install flathub com.obsproject.Studio -y
 	echo -e '\n All Flatpak apps have been installed\n'
 
 # Install flatpak Mangohud app
