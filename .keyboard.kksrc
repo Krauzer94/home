@@ -8,7 +8,7 @@ _launch=Meta+Shift+Print
 _launch=Meta+Shift+A
 
 [flatpak.desktop][Global Shortcuts]
-_launch=Meta+Shift+P
+_launch=
 
 [killall.desktop][Global Shortcuts]
 _launch=Num+*
