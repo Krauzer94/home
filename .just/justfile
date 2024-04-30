@@ -6,7 +6,7 @@ setup-pasters:
 	#!/bin/bash
 
 	echo -e '\n Setting up the paste function\n'
-	sudo sh -c 'echo -e "\n# paste.rs\nfunction paste() {\n    local file=${1:-/dev/stdin}\n    curl --data-binary @${file} https://paste.rs\n}" >> .bashrc'
+	echo -e "\n# paste.rs\nfunction paste() {\n    local file=${1:-/dev/stdin}\n    curl --data-binary @${file} https://paste.rs\n}" >> ~/.bashrc
 	echo -e '\n paste function added to to .bashrc\n'
 
 # User specific Bash aliases
@@ -14,7 +14,7 @@ setup-aliases:
 	#!/bin/bash
 
 	echo -e '\n Setting up the Bash Aliases file\n'
-	echo -e "\n# Bash aliases\nif [ -f ~/.bash_aliases ]; then\n. ~/.bash_aliases\nfi" >> .bashrc
+	echo -e "\n# Bash aliases\nif [ -f ~/.bash_aliases ]; then\n. ~/.bash_aliases\nfi" >> ~/.bashrc
 	echo -e '\n Bash Aliases setup finished\n'
 
 # Install SteamOS specific apps
@@ -96,6 +96,7 @@ installs-neofetch:
 	echo -e '\n Setting up the Neofetch script\n'
 	wget https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
 	mv neofetch .neofetch.sh
+	mv .neofetch.sh $HOME/
 	echo -e '\n Neofetch has finished installing\n'
 
 # Enable system theme for apps
