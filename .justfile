@@ -1,8 +1,7 @@
 # You can add your own commands here! For documentation, see: https://ublue.it/guide/just/
 import "/usr/share/ublue-os/justfile"
 
-# User specific recipes list
-default:
+_default:
 	just --list
 
 # Fast data sharing pastebin

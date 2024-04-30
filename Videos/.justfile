@@ -1,6 +1,6 @@
 # Video editing automation scripts
 
-default:
+_default:
     just --list
 
 # Edit clips and keep the files
