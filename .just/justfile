@@ -6,8 +6,8 @@ setup-pasters:
 	#!/bin/bash
 
 	echo -e '\n Setting up the paste function\n'
-	echo -e "\n# paste.rs\nfunction paste() {\n    local file=${1:-/dev/stdin}\n    curl --data-binary @${file} https://paste.rs\n}" >> ~/.bashrc
-	echo -e '\n paste function added to to .bashrc\n'
+	echo -e "\n# paste.rs\nfunction paste() {\n    local file=${1:-/dev/stdin}\n    curl --data-binary @${file} https://paste.rs\n    echo\n}" >> ~/.bashrc
+	echo -e ' paste function added globally\n'
 
 # User specific Bash aliases
 setup-aliases:
