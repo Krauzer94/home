@@ -16,7 +16,7 @@ clip:
 
     # Rescale to 1080p
     for f in *.mp4; do
-        ffmpeg -i "$f" -vf "scale=1920:1080" "scaled_$f" -y && rm "$f"
+        ffmpeg -i "$f" -vf "scale=1920:1080" -b:v 5000k "scaled_$f" -y && rm "$f"
     done
 
     # Apply video effects
@@ -35,7 +35,7 @@ clip:
         ffmpeg -i "$f" \
         -vf "fade=t=in:st=0:d=1,fade=t=out:st=$start:d=1" \
         -af "afade=t=in:st=0:d=1,afade=t=out:st=$start:d=1" \
-        "$edited" -y && rm "$f"
+        -b:v 5000k "$edited" -y && rm "$f"
     }
 
     # Edit all videos
@@ -56,7 +56,7 @@ deck:
 
     # Rescale to 1080p
     for f in *.mp4; do
-        ffmpeg -i "$f" -vf "scale=1920:1080" "scaled_$f" -y && rm "$f"
+        ffmpeg -i "$f" -vf "scale=1920:1080" -b:v 5000k "scaled_$f" -y && rm "$f"
     done
 
     # Apply video effects
@@ -76,7 +76,7 @@ deck:
         -vf "fade=t=in:st=0:d=1,fade=t=out:st=$start:d=1" \
         -af "afade=t=in:st=0:d=1,afade=t=out:st=$start:d=1" \
         -vf "crop=1920:960:0:60" \
-        "$edited" -y && rm "$f"
+        -b:v 5000k "$edited" -y && rm "$f"
     }
 
     # Edit all videos
@@ -97,7 +97,7 @@ video:
 
     # Rescale to 1080p
     for f in *.mp4; do
-        ffmpeg -i "$f" -vf "scale=1920:1080" "scaled_$f" -y && rm "$f"
+        ffmpeg -i "$f" -vf "scale=1920:1080" -b:v 5000k "scaled_$f" -y && rm "$f"
     done
 
     # Apply video effects
@@ -116,7 +116,7 @@ video:
         ffmpeg -i "$f" \
         -vf "fade=t=in:st=0:d=1,fade=t=out:st=$start:d=1" \
         -af "afade=t=in:st=0:d=1,afade=t=out:st=$start:d=1" \
-        "$edited" -y && rm "$f"
+        -b:v 5000k "$edited" -y && rm "$f"
     }
 
     # Edit all videos
