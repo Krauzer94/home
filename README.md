@@ -8,6 +8,16 @@ fi
 export PATH
 ```
 
+## paste.rs
+Append this to `.bashrc`:
+```bash
+# paste.rs
+function paste() {
+    local file=${1:-/dev/stdin}
+    curl --data-binary @${file} https://paste.rs
+}
+```
+
 ## Flatseal
  1. `xdg-config/gtk-3.0:ro`
  2. `xdg-config/MangoHud:ro`
