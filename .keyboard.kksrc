@@ -2,13 +2,13 @@
 _launch=Meta+Shift+D
 
 [flatpak-2.desktop][Global Shortcuts]
-_launch=Meta+Shift+Print
+_launch=Meta+Shift+A
 
 [flatpak-3.desktop][Global Shortcuts]
 _launch=Meta+Shift+A
 
 [flatpak.desktop][Global Shortcuts]
-_launch=
+_launch=Meta+Shift+Print
 
 [killall.desktop][Global Shortcuts]
 _launch=Num+*
