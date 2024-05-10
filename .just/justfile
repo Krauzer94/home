@@ -34,8 +34,8 @@ installs-steamos:
 	flatpak install flathub com.obsproject.Studio -y
 	echo -e ' All Flatpak apps have been installed\n'
 
-# Install Fedora specific apps
-installs-fedora:
+# Install Bazzite specific apps
+installs-bazzite:
 	#!/bin/bash
 
 	echo -e '\n Installing all Flatpak apps\n'
