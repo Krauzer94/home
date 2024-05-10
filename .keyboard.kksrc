@@ -1,23 +1,23 @@
 [dolphin.desktop][Global Shortcuts]
 _launch=Meta+Shift+D
+# dolphin ~/.local/share/applications
 
 [flatpak-2.desktop][Global Shortcuts]
 _launch=Meta+Shift+A
-
-[flatpak-3.desktop][Global Shortcuts]
-_launch=Meta+Shift+A
+# flatpak run com.visualstudio.code .bash_aliases
 
 [flatpak.desktop][Global Shortcuts]
 _launch=Meta+Shift+Print
-
-[killall.desktop][Global Shortcuts]
-_launch=Num+*
+# flatpak run org.flameshot.Flameshot gui
 
 [kwrite-2.desktop][Global Shortcuts]
 _launch=Meta+Ctrl+H
+# kwrite ~/.config/MangoHud/SteamDeckconf
 
 [kwrite.desktop][Global Shortcuts]
 _launch=Meta+Shift+H
+# kwrite ~/.config/MangoHud/MangoHud.conf
 
 [plasma-systemmonitor.desktop][Global Shortcuts]
 _launch=Ctrl+Shift+Esc
+# plasma-systemmonitor
