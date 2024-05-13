@@ -4,6 +4,7 @@ flatpak-2.desktop
 kwrite.desktop
 kwrite-2.desktop
 plasma-systemmonitor.desktop
+com.obsproject.Studio.desktop
 
 discover_overlay_configure.desktop
 com.gerbilsoft.rom-properties.rp-config.desktop
