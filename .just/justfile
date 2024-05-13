@@ -61,6 +61,7 @@ installs-bazzite:
 	flatpak install flathub com.dec05eba.gpu_screen_recorder -y
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.mozilla.firefox -y
+	flatpak install flathub org.vim.Vim -y
 	echo -e ' All Flatpak apps have been installed\n'
 
 # Install flatpak Mangohud app
