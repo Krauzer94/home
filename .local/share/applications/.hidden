@@ -1,18 +1,19 @@
-dolphin.desktop
-flatpak.desktop
-flatpak-2.desktop
-kwrite.desktop
-kwrite-2.desktop
-plasma-systemmonitor.desktop
 com.obsproject.Studio.desktop
+dolphin.desktop
+flatpak-2.desktop
+flatpak.desktop
+kwrite-2.desktop
+kwrite.desktop
+plasma-systemmonitor.desktop
 
-discover_overlay_configure.desktop
 com.gerbilsoft.rom-properties.rp-config.desktop
+discover_overlay_configure.desktop
 input-remapper-gtk.desktop
 org.gnome.Ptyxis.desktop
 org.rncbc.qsynth.desktop
 protontricks.desktop
 setroubleshoot.desktop
+system-update.desktop
 Waydroid.desktop
 webapp-manager.desktop
 yafti.desktop
