@@ -115,3 +115,18 @@ setup-bigpicture:
 	echo -e "[Desktop Entry]\nName=Gaming Mode\nComment=Launch the Steam Deck console interface\nExec=flatpak run com.valvesoftware.Steam -start steam://open/bigpicture\nIcon=steamdeck-gaming-return\nTerminal=false\nType=Application\nStartupNotify=false\nCategories=Game;" > $HOME/.local/share/applications/Gaming\ Mode_JUST.desktop
 	echo -e "[Desktop Entry]\nCategories=Game;\nComment[en_US]=Launch the Steam Deck console interface\nComment=Launch the Steam Deck console interface\nExec=flatpak run com.valvesoftware.Steam -start steam://open/bigpicture\nGenericName[en_US]=\nGenericName=\nIcon=steamdeck-gaming-return\nMimeType=\nName[en_US]=Return to Gaming Mode\nName=Return to Gaming Mode\nPath=\nStartupNotify=false\nTerminal=false\nTerminalOptions=\nType=Application\nX-KDE-SubstituteUID=false\nX-KDE-Username=" > $HOME/Desktop/Return\ to\ Gaming\ Mode_JUST.desktop
 	echo -e ' Finished creating the two shortcuts\n'
+
+# Install Fastfetch for system info
+installs-fastfetch:
+	#!/bin/bash
+
+	echo -e '\n Setting up the Fasfetch CLI app\n'
+	wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.12.0/fastfetch-linux-aarch64.zip ~/
+	unzip ~/fastfetch-linux-aarch64.zip
+	rm ~/fastfetch-linux-aarch64.zip
+	mv ~/fastfetch-linux-aarch64 ~/fastfetch
+	mv -r ~/fastfetch/usr/bin/* ~/bin
+	mv -r ~/fastfetch/usr/share/fish/* ~/.local/share/fish
+	mv -r ~/fastfetch/usr/share/* ~/.local/share
+	rm -r ~/fastfetch
+	echo -e ' Fastfetch has finished installing\n'
