@@ -125,7 +125,7 @@ installs-fastfetch:
 	unzip ~/fastfetch-linux-aarch64.zip
 	rm ~/fastfetch-linux-aarch64.zip
 	mv ~/fastfetch-linux-aarch64 ~/fastfetch
-	mv -r ~/fastfetch/usr/bin/* ~/bin
+	mv -r ~/fastfetch/usr/bin/* ~/.local/bin
 	mv -r ~/fastfetch/usr/share/fish/* ~/.local/share/fish
 	mv -r ~/fastfetch/usr/share/* ~/.local/share
 	rm -r ~/fastfetch
