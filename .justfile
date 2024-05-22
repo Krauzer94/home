@@ -34,15 +34,14 @@ installs-steamos:
 	flatpak install flathub com.obsproject.Studio -y
 	echo -e ' All Flatpak apps have been installed\n'
 
-# Install Bazzite specific apps
-installs-bazzite:
+# Install Arch specific apps
+installs-arch:
 	#!/bin/bash
 
 	echo -e '\n Installing all Flatpak apps\n'
 	flatpak install flathub com.google.Chrome -y
 	flatpak install flathub org.gimp.GIMP -y
 	flatpak install flathub org.qbittorrent.qBittorrent -y
-	flatpak install flathub org.videolan.VLC -y
 	flatpak install flathub org.flameshot.Flameshot -y
 	flatpak install flathub org.gnome.EasyTAG -y
 	flatpak install flathub com.stremio.Stremio
@@ -58,10 +57,8 @@ installs-bazzite:
 	flatpak install flathub net.davidotek.pupgui2 -y
 	flatpak install flathub net.lutris.Lutris -y
 	flatpak install flathub com.visualstudio.code -y
-	flatpak install flathub com.com.dec05eba.gpu_screen_recorder -y
+	flatpak install flathub com.obsproject.Studio -y
 	flatpak install flathub org.kde.okular -y
-	flatpak install flathub org.mozilla.firefox -y
-	flatpak install flathub org.vim.Vim -y
 	echo -e ' All Flatpak apps have been installed\n'
 
 # Install flatpak Mangohud app
