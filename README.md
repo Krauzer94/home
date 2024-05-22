@@ -1,14 +1,8 @@
 ## Arch
 Additional packages:
- 1. `steam`
- 2. `ffmpeg`
- 3. `git`
- 4. `mangohud`
- 5. `packagekit-qt6`
- 6. `firefox`
- 7. `flatpak`
- 8. `spectacle`
- 9. `timeshift`
+```bash
+steam ffmpeg git mangohud packagekit-qt6 firefox flatpak spectacle timeshift
+```
 
 ## Just
 Append to `.bashrc`:
