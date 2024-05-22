@@ -10,10 +10,6 @@ _launch=Meta+Shift+A
 _launch=Meta+Shift+Print
 # flatpak run org.flameshot.Flameshot gui
 
-[kwrite-2.desktop][Global Shortcuts]
-_launch=Meta+Ctrl+H
-# kwrite ~/.config/MangoHud/SteamDeckconf
-
 [kwrite.desktop][Global Shortcuts]
 _launch=Meta+Shift+H
 # kwrite ~/.config/MangoHud/MangoHud.conf
