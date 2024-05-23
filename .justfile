@@ -132,12 +132,3 @@ setup-theming:
 	flatpak override --user --filesystem=$HOME/.themes
 	flatpak override --user --filesystem=$HOME/.icons
 	echo -e ' Finished applying system themes\n'
-
-# Big Picture mode shortcuts
-setup-bigpicture:
-	#!/bin/bash
-
-	echo -e '\n Setting up Big Picture Mode shortcuts\n'
-	echo -e "[Desktop Entry]\nName=Gaming Mode\nComment=Launch the Steam Deck console interface\nExec=steam -start steam://open/bigpicture\nIcon=steam\nTerminal=false\nType=Application\nStartupNotify=false\nCategories=Game;" > $HOME/.local/share/applications/Gaming\ Mode.desktop
-	echo -e "[Desktop Entry]\nCategories=Game;\nComment[en_US]=Launch the Steam Deck console interface\nComment=Launch the Steam Deck console interface\nExec=steam -start steam://open/bigpicture\nGenericName[en_US]=\nGenericName=\nIcon=steam\nMimeType=\nName[en_US]=Return to Gaming Mode\nName=Return to Gaming Mode\nPath=\nStartupNotify=false\nTerminal=false\nTerminalOptions=\nType=Application\nX-KDE-SubstituteUID=false\nX-KDE-Username=" > $HOME/Desktop/Return\ to\ Gaming\ Mode.desktop
-	echo -e ' Finished creating the two shortcuts\n'
