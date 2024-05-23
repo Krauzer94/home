@@ -1,7 +1,7 @@
 ## Arch
 Additional packages:
 ```bash
-steam ffmpeg git mangohud packagekit-qt6 firefox flatpak spectacle timeshift
+steam ffmpeg git mangohud packagekit-qt6 firefox flatpak spectacle fuse2
 ```
 
 ## Just
