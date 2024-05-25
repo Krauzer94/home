@@ -104,7 +104,7 @@ setup-theming:
 	flatpak override --user --filesystem=$HOME/.icons
 	echo -e ' Finished applying system themes\n'
 
-# Uploads save game folder files
+# Upload savegame folder files
 upload-savegame:
 	#!/bin/bash
 
