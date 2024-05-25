@@ -21,7 +21,7 @@ alias flist='flatpak list --app'
 alias flrun='flatpak list --runtime'
 alias neofetch='sh $HOME/.neofetch.sh'
 alias code='flatpak run com.visualstudio.code'
-alias save='sh .save.sh'
+alias save='just save-game'
 alias aliases='cat ~/.bash_aliases'
 
 # Video editing
