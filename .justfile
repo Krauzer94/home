@@ -17,6 +17,7 @@ installs-debian:
 	sudo apt install network-manager -y
 	sudo nano /etc/network/interfaces
 	sudo apt install kde-plasma-desktop -y
+	sudo dpkg --add-architecture i386
 	sudo apt install steam -y
 	sudo apt install ffmpeg -y
 	sudo apt install git -y
