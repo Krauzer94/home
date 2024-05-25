@@ -22,7 +22,7 @@ installs-debian:
 	sudo apt install ffmpeg -y
 	sudo apt install git -y
 	sudo apt install mangohud -y
-	sudo apt install firefox -y
+	sudo apt install firefox-esr -y
 	sudo apt install timeshift -y
 	sudo apt install flatpak -y
 	sudo apt install plasma-discover-backend-flatpak -y
