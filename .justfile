@@ -38,7 +38,16 @@ installs-steamos:
 installs-arch:
 	#!/bin/bash
 
-	echo -e '\n Installing all Flatpak apps\n'
+	echo -e '\n Installing all Arch Linux apps\n'
+	sudo pacman -S steam --noconfirm
+	sudo pacman -S ffmpeg --noconfirm
+	sudo pacman -S git --noconfirm
+	sudo pacman -S mangohud --noconfirm
+	sudo pacman -S packagekit-qt6 --noconfirm
+	sudo pacman -S firefox --noconfirm
+	sudo pacman -S flatpak --noconfirm
+	sudo pacman -S spectacle --noconfirm
+	sudo pacman -S timeshift --noconfirm
 	flatpak install flathub com.google.Chrome -y
 	flatpak install flathub org.gimp.GIMP -y
 	flatpak install flathub org.qbittorrent.qBittorrent -y
@@ -57,7 +66,7 @@ installs-arch:
 	flatpak install flathub net.davidotek.pupgui2 -y
 	flatpak install flathub net.lutris.Lutris -y
 	flatpak install flathub com.visualstudio.code -y
-	flatpak install flathub com.obsproject.Studio -y
+	flatpak install flathub com.dec05eba.gpu_screen_recorder -y
 	flatpak install flathub org.kde.okular -y
 	echo -e ' All Flatpak apps have been installed\n'
 
