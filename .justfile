@@ -19,6 +19,8 @@ installs-debian:
 	sudo apt install kde-plasma-desktop -y
 	sudo dpkg --add-architecture i386
 	sudo nano /etc/apt/sources.list
+	sudo apt update
+	sudo apt upgrade -y
 	sudo apt install steam-installer -y
 	sudo apt install ffmpeg -y
 	sudo apt install git -y
