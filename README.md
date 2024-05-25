@@ -1,11 +1,5 @@
-## Arch
-Additional packages:
-```bash
-steam ffmpeg git mangohud packagekit-qt6 firefox flatpak spectacle timeshift fuse2
-```
-
 ## `.bashrc`
-#### just
+### just
 ```bash
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
@@ -14,7 +8,7 @@ fi
 export PATH
 ```
 
-#### paste
+### paste
 ```bash
 # paste.rs
 function paste() {
