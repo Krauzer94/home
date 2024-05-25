@@ -27,7 +27,7 @@ installs-debian:
 	sudo apt install flatpak -y
 	sudo apt install plasma-discover-backend-flatpak -y
 	flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-	echo -e ' All Arch Linux apps have been installed\n'
+	echo -e ' All Debian apps have been installed\n'
 
 # Install SteamOS specific apps
 installs-steamos:
