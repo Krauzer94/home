@@ -25,12 +25,4 @@ function paste() {
     echo ""
 }
 ```
-
-## Flatseal
-Global filesystem:
- 1. `xdg-config/gtk-3.0:ro`
- 2. `xdg-config/MangoHud:ro`
- 3. `~/Music`
- 4. `~/Games`
- 5. `MANGOHUD=1`
 ---
