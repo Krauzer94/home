@@ -1,7 +1,7 @@
 _default:
 	just --list
 
-# User specific Bash aliases
+# Set up user bash_aliases file
 setup-aliases:
 	#!/bin/bash
 
@@ -100,18 +100,22 @@ installs-neofetch:
 	mv .neofetch.sh $HOME/
 	echo -e ' Neofetch has finished installing\n'
 
-# Enable system theme for apps
-setup-theming:
+# Set up flatpak permissions
+setup-filesys:
 	#!/bin/bash
 
-	echo -e '\n Managing the theme permissions\n'
+	echo -e '\n Managing flatpak permissions\n'
 	mkdir $HOME/.themes
 	mkdir $HOME/.icons
 	cp -r /usr/share/themes/* $HOME/.themes/
 	cp -r /usr/share/icons/* $HOME/.icons/
 	flatpak override --user --filesystem=$HOME/.themes
 	flatpak override --user --filesystem=$HOME/.icons
-	echo -e ' Finished applying system themes\n'
+	flatpak override --user --filesystem=$HOME/Music
+	flatpak override --user --filesystem=$HOME/Games
+	flatpak override --user --filesystem=xdg-config/gtk-3.0:ro
+	flatpak override --user --filesystem=xdg-config/MangoHud:ro
+	echo -e ' Finished applying flatpak permissions\n'
 
 # Upload savegame folder files
 upload-savegame:
