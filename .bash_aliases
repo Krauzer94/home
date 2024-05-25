@@ -22,6 +22,7 @@ alias flrun='flatpak list --runtime'
 alias neofetch='sh $HOME/.neofetch.sh'
 alias code='flatpak run com.visualstudio.code'
 alias save='sh .save.sh'
+alias aliases='cat ~/.bash_aliases'
 
 # Video editing
 alias video='just video'
