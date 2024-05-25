@@ -4,8 +4,8 @@ Additional packages:
 steam ffmpeg git mangohud packagekit-qt6 firefox flatpak spectacle timeshift fuse2
 ```
 
-## Just
-Append to `.bashrc`:
+## `.bashrc`
+#### just
 ```bash
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
@@ -14,8 +14,7 @@ fi
 export PATH
 ```
 
-## paste.rs
-Append to `.bashrc`:
+#### paste
 ```bash
 # paste.rs
 function paste() {
