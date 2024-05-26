@@ -48,6 +48,7 @@ installs-arch:
 	sudo pacman -S flatpak --noconfirm
 	sudo pacman -S spectacle --noconfirm
 	sudo pacman -S timeshift --noconfirm
+	sudo pacman -S nvidia-settings --noconfirm
 	flatpak install flathub com.google.Chrome -y
 	flatpak install flathub org.gimp.GIMP -y
 	flatpak install flathub org.qbittorrent.qBittorrent -y
