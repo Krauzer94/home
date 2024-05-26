@@ -9,50 +9,6 @@ setup-aliases:
 	echo -e "\n# Bash aliases\nif [ -f ~/.bash_aliases ]; then\n. ~/.bash_aliases\nfi" >> ~/.bashrc
 	echo -e ' Bash Aliases setup finished\n'
 
-# Install Debian specific apps
-installs-debian:
-	#!/bin/bash
-
-	echo -e '\n Installing all Debian apps\n'
-	sudo apt install network-manager -y
-	sudo nano /etc/network/interfaces
-	sudo apt install kde-plasma-desktop -y
-	sudo dpkg --add-architecture i386
-	sudo nano /etc/apt/sources.list
-	sudo apt update
-	sudo apt upgrade -y
-	sudo apt install steam-installer -y
-	sudo apt install ffmpeg -y
-	sudo apt install git -y
-	sudo apt install mangohud -y
-	sudo apt install firefox-esr -y
-	sudo apt install timeshift -y
-	sudo apt install flatpak -y
-	sudo apt install plasma-discover-backend-flatpak -y
-	flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-	flatpak install flathub com.google.Chrome -y
-	flatpak install flathub org.gimp.GIMP -y
-	flatpak install flathub org.qbittorrent.qBittorrent -y
-	flatpak install flathub org.flameshot.Flameshot -y
-	flatpak install flathub org.gnome.EasyTAG -y
-	flatpak install flathub com.stremio.Stremio -y
-	flatpak install flathub org.kde.gwenview -y
-	flatpak install flathub org.kde.kcalc -y
-	flatpak install flathub org.bleachbit.BleachBit -y
-	flatpak install flathub com.spotify.Client -y
-	flatpak install flathub org.libretro.RetroArch -y
-	flatpak install flathub org.onlyoffice.desktopeditors -y
-	flatpak install flathub com.discordapp.Discord -y
-	flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y
-	flatpak install flathub com.github.tchx84.Flatseal -y
-	flatpak install flathub net.davidotek.pupgui2 -y
-	flatpak install flathub net.lutris.Lutris -y
-	flatpak install flathub com.visualstudio.code -y
-	flatpak install flathub com.dec05eba.gpu_screen_recorder -y
-	flatpak install flathub org.kde.okular -y
-	flatpak install flathub org.videolan.VLC -y
-	echo -e ' All Debian apps have been installed\n'
-
 # Install SteamOS specific apps
 installs-steamos:
 	#!/bin/bash
