@@ -15,7 +15,7 @@ alias fetch='git fetch'
 alias pull='git pull'
 
 # Other aliases
-alias ll='ls -l'
+alias ll='ls -l --color=auto'
 alias shutdown='shutdown now'
 alias flist='flatpak list --app'
 alias flrun='flatpak list --runtime'
