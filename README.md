@@ -1,14 +1,4 @@
 ## `.bashrc`
-### flatrun
-```bash
-# Use Name instead of ID for 'flatpak run'
-function flatrun(){
-    app_name="$@"
-    app_id=$(flatpak list | grep -F -i "$app_name" | awk '{for(i=1;i<=NF;i++){ if($i ~ /\S+\.\S*/){print $i; break;} } }');
-    flatpak run $app_id
-}
-```
-
 ### just
 ```bash
 # User specific environment
