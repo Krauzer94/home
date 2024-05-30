@@ -27,4 +27,4 @@ alias aliases='cat ~/.bash_aliases'
 # Video editing
 alias video='just video'
 alias clip='just clip'
-alias deck='just deck'
+#alias deck='just deck'
