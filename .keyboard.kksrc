@@ -1,21 +1,14 @@
-## Shortcuts
-1. Meta + Shift + D:
-```
 dolphin ~/.local/share/applications
-```
-2. Meta + Shift + A:
-```
+_launch=Meta+Shift+D
+
 flatpak run com.visualstudio.code .bash_aliases
-```
-3. Meta + Shift + Print:
-```
+_launch=Meta+Shift+Print
+
 flatpak run org.flameshot.Flameshot gui
-```
-4. Meta + Shift + H:
-```
+_launch=Meta+Shift+A
+
 kwrite ~/.config/MangoHud/MangoHud.conf
-```
-5. Ctrl + Shift + Esc:
-```
+_launch=Meta+Shift+H
+
 plasma-systemmonitor
-```
+_launch=Ctrl+Shift+Esc
