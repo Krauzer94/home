@@ -23,7 +23,7 @@ clip:
     apply_effects() {
         # Input and output
         f="$1"
-        edited="edited_${f%.*}.${f##*.}"
+        clip="clip-${f%.*}.${f##*.}"
 
         # Find video duration
         duration=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f")
@@ -34,7 +34,7 @@ clip:
         # Apply fade effects
         ffmpeg -i "$f" \
         -vf "fade=t=in:st=0:d=1,fade=t=out:st=$start:d=1" \
-        -af "afade=t=in:st=0:d=1,afade=t=out:st=$start:d=1" "$edited" -y && rm "$f"
+        -af "afade=t=in:st=0:d=1,afade=t=out:st=$start:d=1" "$clip" -y && rm "$f"
         #-b:v 5000k \
     }
 
@@ -63,7 +63,7 @@ video:
     apply_effects() {
         # Input and output
         f="$1"
-        edited="edited_${f%.*}.${f##*.}"
+        clip="clip-${f%.*}.${f##*.}"
 
         # Find video duration
         duration=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f")
@@ -74,7 +74,7 @@ video:
         # Apply fade effects
         ffmpeg -i "$f" \
         -vf "fade=t=in:st=0:d=1,fade=t=out:st=$start:d=1" \
-        -af "afade=t=in:st=0:d=1,afade=t=out:st=$start:d=1" "$edited" -y && rm "$f"
+        -af "afade=t=in:st=0:d=1,afade=t=out:st=$start:d=1" "$clip" -y && rm "$f"
         #-b:v 5000k \
     }
 
@@ -86,7 +86,7 @@ video:
     # Create intermediate
     counter=1
     for f in *.mp4; do
-        ffmpeg -i "$f" -c copy "intermediate_${counter}.ts" && rm "$f"
+        ffmpeg -i "$f" -c copy "intermediate-${counter}.ts" && rm "$f"
         ((counter++))
     done
 
