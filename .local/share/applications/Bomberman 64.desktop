@@ -10,7 +10,7 @@ Comment[fr]=Interface graphique pour émulateurs, moteurs de jeu et lecteurs mul
 Comment[de]=Front-End für Emulatoren, Spiel-Engines und Mediaplayer
 #Icon=org.libretro.RetroArch
 Icon=/home/deck/Games/Media/Icon.png
-Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=retroarch org.libretro.RetroArch  -L /home/deck/.var/app/org.libretro.RetroArch/config/retroarch/cores/mupen64plus_next_libretro.so /home/deck/Games/Game.n64
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=retroarch org.libretro.RetroArch -L /home/deck/.var/app/org.libretro.RetroArch/config/retroarch/cores/mupen64plus_next_libretro.so /home/deck/Games/Game.n64
 Terminal=false
 StartupNotify=false
 StartupWMClass=retroarch
