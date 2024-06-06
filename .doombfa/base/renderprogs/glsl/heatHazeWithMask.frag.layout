@@ -1,6 +1,0 @@
-uniforms [
-	rpWindowCoord
-]
-bindings [
-	ubo
-]

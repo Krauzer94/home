@@ -1,6 +1,0 @@
-struct PS_OUT {
-float4 color : COLOR ; 
-} ;
-void main (out PS_OUT result )  {
-result . color = float4 ( 0.0 , 0.0 , 0.0 , 1.0 ) ; 
-} 

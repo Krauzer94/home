@@ -1,6 +1,0 @@
-uniforms [
-	rpScreenCorrectionFactor
-]
-bindings [
-	ubo
-]
