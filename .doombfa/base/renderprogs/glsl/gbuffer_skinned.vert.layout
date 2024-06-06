@@ -1,0 +1,15 @@
+uniforms [
+	rpBumpMatrixS
+	rpBumpMatrixT
+	rpMVPmatrixX
+	rpMVPmatrixY
+	rpMVPmatrixZ
+	rpMVPmatrixW
+	rpModelViewMatrixX
+	rpModelViewMatrixY
+	rpModelViewMatrixZ
+]
+bindings [
+	ubo
+	ubo
+]
