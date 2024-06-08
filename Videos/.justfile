@@ -79,9 +79,9 @@ video:
     }
 
     # Edit all videos
-    for f in *.mp4; do
-        apply_effects "$f"
-    done
+    #for f in *.mp4; do
+    #    apply_effects "$f"
+    #done
 
     # Create intermediate
     counter=1
