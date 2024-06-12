@@ -99,7 +99,7 @@ video:
     ffmpeg -i "$concat_list" -c copy merged.mp4
 
     # Upscale to 1080p
-    ffmpeg -i merged.mp4 -vf "scale=1920:1080" -c:v libx264 -crf 23 -preset veryfast veryfast.mp4
+    ffmpeg -i merged.mp4 -vf "scale=1920:1080" -c:v libx264 -crf 23 -preset veryfast video.mp4
     rm merged.mp4
 
     # Delete intermediates
