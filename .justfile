@@ -127,11 +127,47 @@ upload-savegame:
 	git commit -m "Save game upload"
 	git push
 
+# Edit clips and keep the files
+[no-cd]
+edit-clips:
+    #!/bin/bash
+
+    # Rename clips
+    counter=1
+    for f in *.mp4; do
+        mv "$f" "${counter}.mp4"
+        ((counter++))
+    done
+
+    # Apply video effects
+    apply_effects() {
+        # Input and output
+        f="$1"
+        clip="clip-${f%.*}.${f##*.}"
+
+        # Find video duration
+        duration=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f")
+
+        # Find the last second
+        start=$(awk -v dur="$duration" 'BEGIN { print dur - 1 }')
+
+        # Apply fade effects
+        ffmpeg -i "$f" \
+        -vf "fade=t=in:st=0:d=1,fade=t=out:st=$start:d=1" \
+        -af "afade=t=in:st=0:d=1,afade=t=out:st=$start:d=1" "$clip" -y && rm "$f"
+    }
+
+    # Edit all videos
+    for f in *.mp4; do
+        apply_effects "$f"
+    done
+
 # Edit clips and merge all files
 [no-cd]
 edit-videos:
     #!/bin/bash
 
+    # Create intermediates
     counter=1
     for f in *.mp4; do
         ffmpeg -i "$f" -c copy "intermediate-${counter}.ts" && rm "$f"
