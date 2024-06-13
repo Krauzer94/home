@@ -1,0 +1,18 @@
+uniforms [
+	rpLocalViewOrigin
+	rpBumpMatrixS
+	rpBumpMatrixT
+	rpDiffuseMatrixS
+	rpDiffuseMatrixT
+	rpSpecularMatrixS
+	rpSpecularMatrixT
+	rpVertexColorModulate
+	rpVertexColorAdd
+	rpMVPmatrixX
+	rpMVPmatrixY
+	rpMVPmatrixZ
+	rpMVPmatrixW
+]
+bindings [
+	ubo
+]

@@ -1,0 +1,7 @@
+uniforms [
+	rpDiffuseModifier
+	rpSpecularModifier
+]
+bindings [
+	ubo
+]

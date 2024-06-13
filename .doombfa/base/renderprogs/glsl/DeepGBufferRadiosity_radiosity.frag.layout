@@ -1,0 +1,10 @@
+uniforms [
+	rpScreenCorrectionFactor
+	rpModelMatrixX
+	rpModelMatrixY
+	rpModelMatrixZ
+	rpModelMatrixW
+]
+bindings [
+	ubo
+]

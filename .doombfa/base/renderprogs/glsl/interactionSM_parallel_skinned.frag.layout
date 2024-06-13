@@ -1,0 +1,12 @@
+uniforms [
+	rpScreenCorrectionFactor
+	rpDiffuseModifier
+	rpSpecularModifier
+	rpJitterTexScale
+	rpJitterTexOffset
+	rpCascadeDistances
+	rpShadowMatrices
+]
+bindings [
+	ubo
+]

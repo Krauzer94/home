@@ -1,0 +1,7 @@
+uniforms [
+	rpScreenCorrectionFactor
+	rpJitterTexScale
+]
+bindings [
+	ubo
+]

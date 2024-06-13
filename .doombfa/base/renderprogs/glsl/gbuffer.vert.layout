@@ -1,0 +1,16 @@
+uniforms [
+	rpBumpMatrixS
+	rpBumpMatrixT
+	rpVertexColorModulate
+	rpVertexColorAdd
+	rpMVPmatrixX
+	rpMVPmatrixY
+	rpMVPmatrixZ
+	rpMVPmatrixW
+	rpModelViewMatrixX
+	rpModelViewMatrixY
+	rpModelViewMatrixZ
+]
+bindings [
+	ubo
+]

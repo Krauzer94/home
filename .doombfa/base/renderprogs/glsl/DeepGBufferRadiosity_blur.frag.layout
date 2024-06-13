@@ -1,0 +1,11 @@
+uniforms [
+	rpScreenCorrectionFactor
+	rpModelMatrixX
+	rpModelMatrixY
+	rpModelMatrixZ
+	rpModelMatrixW
+	rpJitterTexScale
+]
+bindings [
+	ubo
+]
