@@ -1,7 +1,0 @@
-uniforms [
-	rpScreenCorrectionFactor
-	rpOverbright
-]
-bindings [
-	ubo
-]
