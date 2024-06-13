@@ -1,8 +1,0 @@
-uniforms [
-	rpDiffuseModifier
-	rpSpecularModifier
-	rpAmbientColor
-]
-bindings [
-	ubo
-]
