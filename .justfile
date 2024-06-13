@@ -126,3 +126,31 @@ upload-savegame:
 	git add .
 	git commit -m "Save game upload"
 	git push
+
+# Edit clips and merge all files
+[no-cd]
+edit-videos:
+    #!/bin/bash
+
+    counter=1
+    for f in *.mp4; do
+        ffmpeg -i "$f" -c copy "intermediate-${counter}.ts" && rm "$f"
+        ((counter++))
+    done
+
+    # Filename array
+    files=($(find . -type f -name "*.ts"))
+    concat_list=$(printf "concat:%s|" "${files[@]}")
+    concat_list=${concat_list%|}
+
+    # Merge all videos
+    ffmpeg -i "$concat_list" -c copy merged.mp4
+
+    # Upscale to 1080p
+    ffmpeg -i merged.mp4 -vf "scale=1920:1080" -c:v libx264 -crf 23 -preset veryfast video.mp4
+    rm merged.mp4
+
+    # Delete intermediates
+    for f in *.ts; do
+        rm "$f"
+    done
