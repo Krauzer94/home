@@ -25,5 +25,5 @@ alias save='just upload-savegame'
 alias aliases='cat ~/.bash_aliases'
 
 # Video editing
-alias video='just video-editing'
-alias clip='just clip-editing'
+alias video='just edit-videos'
+alias clip='just edit-clips'
