@@ -17,7 +17,6 @@ installs-steamos:
 	flatpak install flathub com.google.Chrome -y
 	flatpak install flathub org.gimp.GIMP -y
 	flatpak install flathub org.qbittorrent.qBittorrent -y
-	flatpak install flathub org.videolan.VLC -y
 	flatpak install flathub org.flameshot.Flameshot -y
 	flatpak install flathub org.gnome.EasyTAG -y
 	flatpak install flathub com.stremio.Stremio -y
@@ -32,6 +31,7 @@ installs-steamos:
 	flatpak install flathub net.lutris.Lutris -y
 	flatpak install flathub com.visualstudio.code -y
 	flatpak install flathub com.obsproject.Studio -y
+	flatpak install flathub org.videolan.VLC -y
 	echo -e ' All SteamOS apps have been installed\n'
 
 # Install Arch specific apps
@@ -56,8 +56,6 @@ installs-arch:
 	flatpak install flathub org.flameshot.Flameshot -y
 	flatpak install flathub org.gnome.EasyTAG -y
 	flatpak install flathub com.stremio.Stremio -y
-	flatpak install flathub org.kde.gwenview -y
-	flatpak install flathub org.kde.kcalc -y
 	flatpak install flathub org.bleachbit.BleachBit -y
 	flatpak install flathub com.spotify.Client -y
 	flatpak install flathub org.libretro.RetroArch -y
@@ -68,8 +66,10 @@ installs-arch:
 	flatpak install flathub net.davidotek.pupgui2 -y
 	flatpak install flathub net.lutris.Lutris -y
 	flatpak install flathub com.visualstudio.code -y
-	flatpak install flathub com.dec05eba.gpu_screen_recorder -y
+	flatpak install flathub com.obsproject.Studio -y
 	flatpak install flathub org.kde.okular -y
+	flatpak install flathub org.kde.gwenview -y
+	flatpak install flathub org.kde.kcalc -y
 	echo -e ' All Arch Linux apps have been installed\n'
 
 # Install flatpak Mangohud app
