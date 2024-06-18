@@ -11,7 +11,7 @@ sudo dnf install plasma-workspaces-x11 -y
 ### Flathub
 ```bash
 sudo dnf install flatpak -y
-sudo dnf install plasma-discover-backend-flatpak
+sudo dnf install plasma-discover-backend-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
