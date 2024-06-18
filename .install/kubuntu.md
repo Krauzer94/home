@@ -1,5 +1,5 @@
 ### Steam
-```bash
+```
 dpkg --add-architecture i386
 sudo apt update
 sudo apt install mesa-vulkan-drivers libglx-mesa:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 -y
@@ -7,14 +7,14 @@ sudo apt install steam-installer -y
 ```
 
 ### Flathub
-```bash
+```
 sudo apt install flatpak -y
 sudo apt install plasma-discover-backend-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
 ### Natives
-```bash
+```
 sudo apt install ffmpeg -y
 sudo apt install git -y
 sudo apt install mangohud -y
@@ -23,7 +23,7 @@ sudo apt install konqueror -y
 ```
 
 ### Flatpaks
-```bash
+```
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub org.gimp.GIMP -y
 flatpak install flathub org.qbittorrent.qBittorrent -y
@@ -45,7 +45,7 @@ flatpak install flathub org.videolan.VLC -y
 ```
 
 ### Others
-```bash
+```
 flatpak install flathub org.kde.okular -y
 sudo software-properties-qt
 ```
