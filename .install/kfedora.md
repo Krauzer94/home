@@ -1,0 +1,54 @@
+### Steam
+```bash
+sudo dnf install steam -y
+```
+
+### Xorg
+```bash
+sudo dnf install plasma-workspaces-x11 -y
+```
+
+### Flathub
+```bash
+sudo dnf install flatpak -y
+sudo dnf install plasma-discover-backend-flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+
+### Natives
+```bash
+sudo dnf install ffmpeg -y
+sudo dnf install git -y
+sudo dnf install mangohud -y
+sudo dnf install timeshift -y
+sudo dnf install firefox -y
+```
+
+### Flatpaks
+```bash
+flatpak install flathub com.google.Chrome -y
+flatpak install flathub org.gimp.GIMP -y
+flatpak install flathub org.qbittorrent.qBittorrent -y
+flatpak install flathub org.flameshot.Flameshot -y
+flatpak install flathub org.gnome.EasyTAG -y
+flatpak install flathub com.stremio.Stremio -y
+flatpak install flathub org.bleachbit.BleachBit -y
+flatpak install flathub com.spotify.Client -y
+flatpak install flathub org.libretro.RetroArch -y
+flatpak install flathub org.onlyoffice.desktopeditors -y
+flatpak install flathub com.discordapp.Discord -y
+flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y
+flatpak install flathub com.github.tchx84.Flatseal -y
+flatpak install flathub net.davidotek.pupgui2 -y
+flatpak install flathub net.lutris.Lutris -y
+flatpak install flathub com.visualstudio.code -y
+flatpak install flathub com.obsproject.Studio -y
+flatpak install flathub org.videolan.VLC -y
+```
+
+### Others
+```bash
+flatpak install flathub org.kde.okular -y
+flatpak install flathub org.kde.gwenview -y
+flatpak install flathub org.kde.kcalc -y
+```
