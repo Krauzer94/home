@@ -1,31 +1,8 @@
-### Steam
-```
-sudo dnf install steam -y
-```
-
-### Xorg
-```
-sudo dnf install plasma-workspaces-x11 -y
-```
-
-### Flathub
+### Flatpak
 ```
 sudo dnf install flatpak -y
 sudo dnf install plasma-discover-backend-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-```
-
-### Natives
-```
-sudo dnf install ffmpeg -y
-sudo dnf install git -y
-sudo dnf install mangohud -y
-sudo dnf install timeshift -y
-sudo dnf install firefox -y
-```
-
-### Flatpaks
-```
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub org.gimp.GIMP -y
 flatpak install flathub org.qbittorrent.qBittorrent -y
@@ -44,11 +21,16 @@ flatpak install flathub net.lutris.Lutris -y
 flatpak install flathub com.visualstudio.code -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub org.videolan.VLC -y
-```
-
-### Others
-```
 flatpak install flathub org.kde.okular -y
 flatpak install flathub org.kde.gwenview -y
 flatpak install flathub org.kde.kcalc -y
+```
+
+### DNF
+```
+sudo dnf install ffmpeg -y
+sudo dnf install git -y
+sudo dnf install mangohud -y
+sudo dnf install timeshift -y
+sudo dnf install steam -y
 ```
