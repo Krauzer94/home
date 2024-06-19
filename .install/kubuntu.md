@@ -32,4 +32,5 @@ sudo apt install git -y
 sudo apt install mangohud -y
 sudo apt install timeshift -y
 sudo apt install steam-instaler -y
+sudo software-properties-qt
 ```

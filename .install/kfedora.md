@@ -3,6 +3,7 @@
 sudo dnf install flatpak -y
 sudo dnf install plasma-discover-backend-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.mozilla.firefox -y
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub org.gimp.GIMP -y
 flatpak install flathub org.qbittorrent.qBittorrent -y
@@ -22,8 +23,8 @@ flatpak install flathub com.visualstudio.code -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub org.videolan.VLC -y
 flatpak install flathub org.kde.okular -y
-flatpak install flathub org.kde.gwenview -y
 flatpak install flathub org.kde.kcalc -y
+flatpak install flathub org.kde.gwenview -y
 ```
 
 ### DNF
@@ -33,4 +34,5 @@ sudo dnf install git -y
 sudo dnf install mangohud -y
 sudo dnf install timeshift -y
 sudo dnf install steam -y
+sudo dnf install kate -y
 ```
