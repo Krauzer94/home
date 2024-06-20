@@ -2,10 +2,10 @@ dolphin ~/.local/share/applications
 _launch=Meta+Shift+D
 
 flatpak run com.visualstudio.code .bash_aliases
-_launch=Meta+Shift+Print
+_launch=Meta+Shift+A
 
 flatpak run org.flameshot.Flameshot gui
-_launch=Meta+Shift+A
+_launch=Meta+Shift+Print
 
 kwrite ~/.config/MangoHud/MangoHud.conf
 _launch=Meta+Shift+H
