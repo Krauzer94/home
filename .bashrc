@@ -16,6 +16,11 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
+# Bash aliases
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
+
 # paste.rs
 function paste() {
     echo ""
@@ -24,11 +29,6 @@ function paste() {
     echo ""
     echo ""
 }
-
-# Bash aliases
-if [ -f ~/.bash_aliases ]; then
-. ~/.bash_aliases
-fi
 
 # Just a command runner
 install_just() {
