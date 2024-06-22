@@ -32,6 +32,24 @@ function paste() {
 
 # Just a command runner
 install_just() {
-    curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin
+    echo -e "\nChoose the installation destination:\n"
+    echo -e "1. /usr/bin"
+    echo -e "2. ~/.local/bin\n"
+    read -p "Enter your choice (1 or 2): " choice
+
+    case $choice in
+        1)
+            destination="/usr/bin"
+            ;;
+        2)
+            destination="$HOME/.local/bin"
+            ;;
+        *)
+            echo "Invalid choice. Defaulting to ~/.local/bin."
+            destination="$HOME/.local/bin"
+            ;;
+    esac
+
+    curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to "$destination"
     curl -LJO https://raw.githubusercontent.com/Krauzer94/home/main/.justfile
 }
