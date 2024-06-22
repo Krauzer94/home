@@ -29,3 +29,9 @@ function paste() {
 if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
+
+# Just a command runner
+install_just() {
+    curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin
+    curl -LJO https://raw.githubusercontent.com/Krauzer94/home/main/.justfile
+}
