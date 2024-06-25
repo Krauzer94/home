@@ -9,6 +9,3 @@ _launch=Meta+Shift+Print
 
 kwrite ~/.config/MangoHud/MangoHud.conf
 _launch=Meta+Shift+H
-
-plasma-systemmonitor
-_launch=Ctrl+Shift+Esc
