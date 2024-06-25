@@ -24,7 +24,20 @@ installs-steamos:
 	flatpak install flathub com.visualstudio.code -y
 	flatpak install flathub com.obsproject.Studio -y
 	flatpak install flathub org.videolan.VLC -y
-	echo -e ' All SteamOS apps have been installed\n'
+	echo -e '\n All SteamOS apps have been installed\n'
+
+# Install Mint specific apps
+installs-mint:
+	#!/bin/bash
+
+	echo -e '\n Installing all Linux Mint apps\n'
+	sudo apt update
+	sudo apt install steam -y
+	sudo apt install ffmpeg -y
+	sudo apt install git -y
+	sudo apt install mangohud -y
+	sudo apt install timeshift -y
+	echo -e '\n All Linux Mint apps have been installed\n'
 
 # Install Arch specific apps
 installs-arch:
@@ -62,7 +75,7 @@ installs-arch:
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.kde.gwenview -y
 	flatpak install flathub org.kde.kcalc -y
-	echo -e ' All Arch Linux apps have been installed\n'
+	echo -e '\n All Arch Linux apps have been installed\n'
 
 # Install flatpak Mangohud app
 installs-mangohud:
@@ -70,7 +83,7 @@ installs-mangohud:
 
 	echo -e '\n Installing MangoHud overlay\n'
 	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
-	echo -e ' Flatpak MangoHud app installed\n'
+	echo -e '\n Flatpak MangoHud app installed\n'
 
 # Set up git and GitHub account
 setup-github:
@@ -82,7 +95,7 @@ setup-github:
 	cat ~/.ssh/id_ed25519.pub
 	echo -e '\n Paste it into a new SSH key\n'
 	flatpak run com.google.Chrome https://github.com/settings/keys
-	echo -e ' Git setup finished\n'
+	echo -e '\n Git setup finished\n'
 
 # Install portable Neofetch app
 installs-neofetch:
@@ -92,7 +105,7 @@ installs-neofetch:
 	wget https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
 	mv neofetch .neofetch.sh
 	mv .neofetch.sh $HOME/
-	echo -e ' Neofetch has finished installing\n'
+	echo -e '\n Neofetch has finished installing\n'
 
 # Set up flatpak permissions
 setup-filesys:
@@ -109,7 +122,7 @@ setup-filesys:
 	flatpak override --user --filesystem=$HOME/Games
 	flatpak override --user --filesystem=xdg-config/gtk-3.0:ro
 	flatpak override --user --filesystem=xdg-config/MangoHud:ro
-	echo -e ' Finished applying flatpak permissions\n'
+	echo -e '\n Finished applying flatpak permissions\n'
 
 # Upload savegame folder files
 upload-savegame:
