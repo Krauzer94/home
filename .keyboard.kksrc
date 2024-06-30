@@ -9,3 +9,6 @@ _launch=Meta+Shift+Print
 
 kwrite ~/.config/MangoHud/MangoHud.conf
 _launch=Meta+Shift+H
+
+killall -SIGUSR1 gpu-screen-recorder
+_launch=*
