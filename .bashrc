@@ -37,3 +37,16 @@ install_just() {
     curl -LJO https://raw.githubusercontent.com/Krauzer94/home/main/.justfile
     echo -e '\n All done, run "just" to see your recipes list\n'
 }
+
+# Sets up my $HOME repo
+myhome() {
+    echo -e '\n Setting up my $HOME GitHub reposiroty\n'
+    curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin
+    rmdir Templates && rmdir Public && mkdir Repos
+    sudo pacman -S git --noconfirm && sudo apt install git -y
+    git clone https://github.com/Krauzer94/home.git && cd ~/home
+    mkdir ~/.config/MangoHud && cp .config/MangoHud/MangoHud.conf ~/.config/MangoHud/
+    mkdir ~/.local/share/applications && cp .local/share/applications/.hidden ~/.local/share/applications/
+    cp -r Games ~/ && cp .bash_aliases ~/ && cp .gitconfig ~/ && cp .gitignore ~/ && cp .justfile ~/ && cp .keyboard.kksrc ~/
+    clear && echo -e '\n All done, run "just" to see your recipes\n'
+}
