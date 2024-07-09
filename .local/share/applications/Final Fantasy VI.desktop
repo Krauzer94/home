@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Name=Final Fanasy VI
+Name=Final Fantasy VI
 GenericName=Frontend for the libretro API
 Type=Application
 Comment=Play this game on Arch
@@ -13,3 +13,4 @@ StartupWMClass=retroarch
 Keywords=multi;engine;emulator;xmb;
 Categories=Game;Emulator;
 X-Flatpak=org.libretro.RetroArch
+Name[en_US]=Final Fantasy VI.desktop
