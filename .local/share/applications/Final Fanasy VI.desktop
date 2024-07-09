@@ -1,7 +1,15 @@
 [Desktop Entry]
+Version=1.0
 Name=Final Fanasy VI
-Categories=Game;
-Comment[en_US]=Play this game on RetroArch
+GenericName=Frontend for the libretro API
+Type=Application
 Comment=Play this game on Arch
-Exec=flatpak run org.libretro.RetroArch -L /home/deck/.var/app/org.libretro.RetroArch/config/retroarch/cores/mednafen_supafaust_libretro.so /home/deck/Games/Game.sfc
+Comment[en_US]=Play this game on RetroArch
 Icon=/home/deck/Games/Media/Icon.png
+Exec=flatpak run org.libretro.RetroArch -L /home/deck/.var/app/org.libretro.RetroArch/config/retroarch/cores/mednafen_supafaust_libretro.so /home/deck/Games/Game.sfc
+Terminal=false
+StartupNotify=false
+StartupWMClass=retroarch
+Keywords=multi;engine;emulator;xmb;
+Categories=Game;Emulator;
+X-Flatpak=org.libretro.RetroArch
