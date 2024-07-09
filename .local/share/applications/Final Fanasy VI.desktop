@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Final Fanasy VI
+Categories=Game;
+Comment[en_US]=Play this game on RetroArch
+Comment=Play this game on Arch
+Exec=flatpak run org.libretro.RetroArch -L /home/deck/.var/app/org.libretro.RetroArch/config/retroarch/cores/mednafen_supafaust_libretro.so /home/deck/Games/Game.sfc
+Icon=/home/deck/Games/Media/Icon.png
