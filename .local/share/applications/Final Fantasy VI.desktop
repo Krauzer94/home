@@ -1,10 +1,9 @@
 [Desktop Entry]
 Version=1.0
 Name=Final Fantasy VI
-GenericName=Frontend for the libretro API
+GenericName=Play this game on RetroArch
 Type=Application
 Comment=Play this game on Arch
-Comment[en_US]=Play this game on RetroArch
 Icon=/home/deck/Games/Media/Icon.png
 Exec=flatpak run org.libretro.RetroArch -L /home/deck/.var/app/org.libretro.RetroArch/config/retroarch/cores/mednafen_supafaust_libretro.so /home/deck/Games/Game.sfc
 Terminal=false
@@ -13,4 +12,3 @@ StartupWMClass=retroarch
 Keywords=multi;engine;emulator;xmb;
 Categories=Game;Emulator;
 X-Flatpak=org.libretro.RetroArch
-Name[en_US]=Final Fantasy VI.desktop
