@@ -37,24 +37,20 @@ installs-steamos:
 	flatpak install flathub org.videolan.VLC -y
 	echo -e '\n All SteamOS apps have been installed\n'
 
-# Install Ubuntu specific apps
-installs-ubuntu:
+# Install Fedora specific apps
+installs-fedora:
 	#!/bin/bash
 
-	echo -e '\n Installing all Ubuntu apps\n'
+	echo -e '\n Installing all Fedora apps\n'
 	just installs-common
-	sudo apt update && sudo apt upgrade -y
-	sudo apt install steam -y
-	sudo apt install ffmpeg -y
-	sudo apt install git -y
-	sudo apt install mangohud -y
-	sudo apt install timeshift -y
-	sudo apt install kwrite -y
-	sudo apt install flatpak -y
-	flatpak install flathub org.videolan.VLC -y
-	flatpak install flathub org.kde.okular -y
-	flatpak install flathub org.mozilla.firefox -y
-	echo -e '\n All Ubuntu apps have been installed\n'
+	sudo dnf install steam -y
+	sudo dnf install ffmpeg -y
+	sudo dnf install git -y
+	sudo dnf install mangohud -y
+	sudo dnf install firefox -y
+	sudo dnf install flatpak -y
+	sudo dnf install btrfs-assistant -y
+	echo -e '\n All Fedora apps have been installed\n'
 
 # Install Arch specific apps
 installs-arch:
