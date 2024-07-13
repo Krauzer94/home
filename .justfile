@@ -1,11 +1,11 @@
 _default:
 	just --list
 
-# Install SteamOS specific apps
-installs-steamos:
+# Install common applications
+installs-common:
 	#!/bin/bash
 
-	echo -e '\n Installing all SteamOS apps\n'
+	echo -e '\n Installing all common applications\n'
 	flatpak install flathub com.google.Chrome -y
 	flatpak install flathub org.gimp.GIMP -y
 	flatpak install flathub org.qbittorrent.qBittorrent -y
@@ -23,6 +23,14 @@ installs-steamos:
 	flatpak install flathub net.lutris.Lutris -y
 	flatpak install flathub com.visualstudio.code -y
 	flatpak install flathub com.obsproject.Studio -y
+	echo -e '\n All common applications have been installed\n'
+
+# Install SteamOS specific apps
+installs-steamos:
+	#!/bin/bash
+
+	echo -e '\n Installing all SteamOS apps\n'
+	just installs-common
 	flatpak install flathub org.videolan.VLC -y
 	echo -e '\n All SteamOS apps have been installed\n'
 
@@ -39,23 +47,7 @@ installs-ubuntu:
 	sudo apt install timeshift -y
 	sudo apt install kwrite -y
 	sudo apt install flatpak -y
-	flatpak install flathub com.google.Chrome -y
-	flatpak install flathub org.gimp.GIMP -y
-	flatpak install flathub org.qbittorrent.qBittorrent -y
-	flatpak install flathub org.flameshot.Flameshot -y
-	flatpak install flathub org.gnome.EasyTAG -y
-	flatpak install flathub com.stremio.Stremio -y
-	flatpak install flathub org.bleachbit.BleachBit -y
-	flatpak install flathub com.spotify.Client -y
-	flatpak install flathub org.libretro.RetroArch -y
-	flatpak install flathub org.onlyoffice.desktopeditors -y
-	flatpak install flathub com.discordapp.Discord -y
-	flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y
-	flatpak install flathub com.github.tchx84.Flatseal -y
-	flatpak install flathub net.davidotek.pupgui2 -y
-	flatpak install flathub net.lutris.Lutris -y
-	flatpak install flathub com.visualstudio.code -y
-	flatpak install flathub com.obsproject.Studio -y
+	just installs-common
 	flatpak install flathub org.videolan.VLC -y
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.mozilla.firefox -y
@@ -77,23 +69,7 @@ installs-arch:
 	sudo pacman -S timeshift --noconfirm
 	sudo pacman -S nvidia-settings --noconfirm
 	# sudo pacman -S sof-firmware --noconfirm
-	flatpak install flathub com.google.Chrome -y
-	flatpak install flathub org.gimp.GIMP -y
-	flatpak install flathub org.qbittorrent.qBittorrent -y
-	flatpak install flathub org.flameshot.Flameshot -y
-	flatpak install flathub org.gnome.EasyTAG -y
-	flatpak install flathub com.stremio.Stremio -y
-	flatpak install flathub org.bleachbit.BleachBit -y
-	flatpak install flathub com.spotify.Client -y
-	flatpak install flathub org.libretro.RetroArch -y
-	flatpak install flathub org.onlyoffice.desktopeditors -y
-	flatpak install flathub com.discordapp.Discord -y
-	flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y
-	flatpak install flathub com.github.tchx84.Flatseal -y
-	flatpak install flathub net.davidotek.pupgui2 -y
-	flatpak install flathub net.lutris.Lutris -y
-	flatpak install flathub com.visualstudio.code -y
-	flatpak install flathub com.obsproject.Studio -y
+	just installs-common
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.kde.gwenview -y
 	flatpak install flathub org.kde.kcalc -y
