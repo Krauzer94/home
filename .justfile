@@ -50,6 +50,7 @@ installs-fedora:
 	sudo dnf install firefox -y
 	sudo dnf install flatpak -y
 	sudo dnf install btrfs-assistant -y
+	sudo dnf install akmod-nvidia -y
 	echo -e '\n All Fedora apps have been installed\n'
 
 # Install Arch specific apps
