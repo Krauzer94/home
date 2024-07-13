@@ -25,7 +25,7 @@ installs-common:
 	flatpak install flathub net.davidotek.pupgui2 -y
 	flatpak install flathub net.lutris.Lutris -y
 	flatpak install flathub com.visualstudio.code -y
-	flatpak install flathub com.obsproject.Studio -y
+	flatpak install flathub com.dec05eba.gpu_screen_recorder -y
 	echo -e '\n All common applications have been installed\n'
 
 # Install SteamOS specific apps
