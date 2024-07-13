@@ -58,6 +58,7 @@ installs-arch:
 	#!/bin/bash
 
 	echo -e '\n Installing all Arch Linux apps\n'
+	sudo systemctl enable --now cronie.service NetworkManager.service
 	just installs-common
 	sudo pacman -S steam --noconfirm
 	sudo pacman -S ffmpeg --noconfirm
