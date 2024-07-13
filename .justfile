@@ -42,6 +42,7 @@ installs-ubuntu:
 	#!/bin/bash
 
 	echo -e '\n Installing all Ubuntu apps\n'
+	just installs-common
 	sudo apt update && sudo apt upgrade -y
 	sudo apt install steam -y
 	sudo apt install ffmpeg -y
@@ -50,7 +51,6 @@ installs-ubuntu:
 	sudo apt install timeshift -y
 	sudo apt install kwrite -y
 	sudo apt install flatpak -y
-	just installs-common
 	flatpak install flathub org.videolan.VLC -y
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.mozilla.firefox -y
@@ -61,6 +61,7 @@ installs-arch:
 	#!/bin/bash
 
 	echo -e '\n Installing all Arch Linux apps\n'
+	just installs-common
 	sudo pacman -S steam --noconfirm
 	sudo pacman -S ffmpeg --noconfirm
 	sudo pacman -S git --noconfirm
@@ -72,7 +73,6 @@ installs-arch:
 	sudo pacman -S timeshift --noconfirm
 	sudo pacman -S nvidia-settings --noconfirm
 	# sudo pacman -S sof-firmware --noconfirm
-	just installs-common
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.kde.gwenview -y
 	flatpak install flathub org.kde.kcalc -y
