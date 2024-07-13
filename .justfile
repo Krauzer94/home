@@ -64,12 +64,12 @@ installs-arch:
 	sudo pacman -S ffmpeg --noconfirm
 	sudo pacman -S git --noconfirm
 	sudo pacman -S mangohud --noconfirm
-	sudo pacman -S packagekit-qt6 --noconfirm
 	sudo pacman -S firefox --noconfirm
 	sudo pacman -S flatpak --noconfirm
-	sudo pacman -S spectacle --noconfirm
 	sudo pacman -S timeshift --noconfirm
 	sudo pacman -S nvidia-settings --noconfirm
+	sudo pacman -S spectacle --noconfirm
+	sudo pacman -S packagekit-qt6 --noconfirm
 	# sudo pacman -S sof-firmware --noconfirm
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.kde.gwenview -y
