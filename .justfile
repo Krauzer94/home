@@ -6,6 +6,9 @@ installs-common:
 	#!/bin/bash
 
 	echo -e '\n Installing all common applications\n'
+	just installs-mangohud
+	just installs-neofetch
+	just setup-filesys
 	flatpak install flathub com.google.Chrome -y
 	flatpak install flathub org.gimp.GIMP -y
 	flatpak install flathub org.qbittorrent.qBittorrent -y
@@ -39,7 +42,7 @@ installs-ubuntu:
 	#!/bin/bash
 
 	echo -e '\n Installing all Ubuntu apps\n'
-	sudo apt update
+	sudo apt update && sudo apt upgrade -y
 	sudo apt install steam -y
 	sudo apt install ffmpeg -y
 	sudo apt install git -y
