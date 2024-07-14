@@ -70,7 +70,7 @@ installs-arch:
 	sudo pacman -S nvidia-settings --noconfirm
 	sudo pacman -S spectacle --noconfirm
 	sudo pacman -S packagekit-qt6 --noconfirm
-	# sudo pacman -S sof-firmware --noconfirm
+	# sudo pacman -S ufw --noconfirm
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.kde.gwenview -y
 	flatpak install flathub org.kde.kcalc -y
