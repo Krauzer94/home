@@ -6,7 +6,6 @@ installs-common:
 	#!/bin/bash
 
 	echo -e '\n Installing all common applications\n'
-	just installs-mangohud
 	just installs-neofetch
 	just setup-filesys
 	flatpak install flathub com.google.Chrome -y
@@ -33,6 +32,7 @@ installs-steamos:
 	#!/bin/bash
 
 	echo -e '\n Installing all SteamOS apps\n'
+	just installs-mangohud
 	just installs-common
 	flatpak install flathub org.videolan.VLC -y
 	echo -e '\n All SteamOS apps have been installed\n'
@@ -42,7 +42,7 @@ installs-ubuntu:
 	#!/bin/bash
 
 	echo -e '\n Installing all Ubuntu apps\n'
-	just installs-common
+	just installs-mangohud
 	sudo apt install steam-installer -y
 	sudo apt install ffmpeg -y
 	sudo apt install git -y
@@ -51,6 +51,7 @@ installs-ubuntu:
 	sudo apt install timeshift -y
 	sudo apt install kwrite -y
 	sudo ubuntu-drivers install
+	just installs-common
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.videolan.VLC -y
 	flatpak install flathub org.mozilla.firefox -y
@@ -61,6 +62,7 @@ installs-arch:
 	#!/bin/bash
 
 	echo -e '\n Installing all Arch Linux apps\n'
+	just installs-mangohud
 	sudo systemctl enable --now cronie.service NetworkManager.service
 	just installs-common
 	sudo pacman -S steam --noconfirm
@@ -74,6 +76,7 @@ installs-arch:
 	sudo pacman -S spectacle --noconfirm
 	sudo pacman -S packagekit-qt6 --noconfirm
 	# sudo pacman -S ufw --noconfirm
+	just installs-common
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.kde.gwenview -y
 	flatpak install flathub org.kde.kcalc -y
