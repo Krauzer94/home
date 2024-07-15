@@ -51,6 +51,10 @@ installs-fedora:
 	sudo dnf install flatpak -y
 	sudo dnf install btrfs-assistant -y
 	sudo dnf install akmod-nvidia -y
+	sudo dnf install kcalc -y
+	flatpak install flathub org.kde.okular -y
+	flatpak install flathub org.kde.gwenview -y
+	flatpak install flathub org.videolan.VLC -y
 	echo -e '\n All Fedora apps have been installed\n'
 
 # Install Arch specific apps
