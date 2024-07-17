@@ -43,11 +43,12 @@ installs-gnome:
 
 	echo -e '\n Installing all GNOME apps\n'
 	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
+	sudo pacman -S git --noconfirm
+	sudo pacman -S flatpak --noconfirm
+	sudo pacman -S timeshift --noconfirm
 	sudo pacman -S steam --noconfirm
 	sudo pacman -S ffmpeg --noconfirm
 	sudo pacman -S mangohud --noconfirm
-	sudo pacman -S flatpak --noconfirm
-	sudo pacman -S timeshift --noconfirm
 	sudo systemctl enable --now cronie.service
 	just installs-common
 	flatpak install flathub org.videolan.VLC -y
@@ -61,12 +62,13 @@ installs-arch:
 
 	echo -e '\n Installing all Arch Linux apps\n'
 	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
+	sudo pacman -S git --noconfirm
+	sudo pacman -S flatpak --noconfirm
+	sudo pacman -S timeshift --noconfirm
 	sudo pacman -S steam --noconfirm
 	sudo pacman -S ffmpeg --noconfirm
 	sudo pacman -S mangohud --noconfirm
 	sudo pacman -S firefox --noconfirm
-	sudo pacman -S flatpak --noconfirm
-	sudo pacman -S timeshift --noconfirm
 	sudo pacman -S spectacle --noconfirm
 	sudo pacman -S packagekit-qt6 --noconfirm
 	sudo systemctl enable --now cronie.service NetworkManager.service
