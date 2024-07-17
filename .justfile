@@ -64,7 +64,6 @@ installs-arch:
 	echo -e '\n Installing all Arch Linux apps\n'
 	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
 	sudo systemctl enable --now cronie.service NetworkManager.service
-	just installs-common
 	sudo pacman -S steam --noconfirm
 	sudo pacman -S ffmpeg --noconfirm
 	sudo pacman -S git --noconfirm
