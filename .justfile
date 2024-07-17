@@ -69,7 +69,6 @@ installs-arch:
 	sudo pacman -S firefox --noconfirm
 	sudo pacman -S flatpak --noconfirm
 	sudo pacman -S timeshift --noconfirm
-	sudo pacman -S nvidia-settings --noconfirm
 	sudo pacman -S spectacle --noconfirm
 	sudo pacman -S packagekit-qt6 --noconfirm
 	# sudo pacman -S ufw --noconfirm
