@@ -32,7 +32,7 @@ installs-steamos:
 	#!/bin/bash
 
 	echo -e '\n Installing all SteamOS apps\n'
-	just installs-mangohud
+	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
 	just installs-common
 	flatpak install flathub org.videolan.VLC -y
 	echo -e '\n All SteamOS apps have been installed\n'
@@ -42,7 +42,7 @@ installs-ubuntu:
 	#!/bin/bash
 
 	echo -e '\n Installing all Ubuntu apps\n'
-	just installs-mangohud
+	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
 	sudo apt install steam-installer -y
 	sudo apt install ffmpeg -y
 	sudo apt install git -y
@@ -62,7 +62,7 @@ installs-arch:
 	#!/bin/bash
 
 	echo -e '\n Installing all Arch Linux apps\n'
-	just installs-mangohud
+	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
 	sudo systemctl enable --now cronie.service NetworkManager.service
 	just installs-common
 	sudo pacman -S steam --noconfirm
@@ -81,14 +81,6 @@ installs-arch:
 	flatpak install flathub org.kde.gwenview -y
 	flatpak install flathub org.kde.kcalc -y
 	echo -e '\n All Arch Linux apps have been installed\n'
-
-# Install flatpak Mangohud app
-installs-mangohud:
-	#!/bin/bash
-
-	echo -e '\n Installing MangoHud overlay\n'
-	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
-	echo -e '\n Flatpak MangoHud app installed\n'
 
 # Set up git and GitHub account
 setup-github:
