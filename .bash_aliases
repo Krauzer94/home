@@ -1,7 +1,7 @@
 # Update and clean
-alias fupdate='flatpak update'
+alias fupdate='flatpak update -y'
 alias fclean='flatpak uninstall --unused'
-alias supdate='sudo pacman -Syu'
+alias supdate='sudo pacman -Syu --noconfirm'
 alias sclean='sudo pacman -Rns $(pacman -Qtdq)'
 
 # Git routines
