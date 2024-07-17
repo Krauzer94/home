@@ -49,7 +49,9 @@ installs-gnome:
 	sudo pacman -S steam --noconfirm
 	sudo pacman -S ffmpeg --noconfirm
 	sudo pacman -S mangohud --noconfirm
+	sudo pacman -S wayland-protocols --noconfirm
 	sudo systemctl enable --now cronie.service
+	ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 	just installs-common
 	flatpak install flathub org.videolan.VLC -y
 	flatpak install flathub org.mozilla.firefox -y
