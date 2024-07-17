@@ -37,25 +37,24 @@ installs-steamos:
 	flatpak install flathub org.videolan.VLC -y
 	echo -e '\n All SteamOS apps have been installed\n'
 
-# Install Ubuntu specific apps
-installs-ubuntu:
+# Install GNOME specific apps
+installs-gnome:
 	#!/bin/bash
 
-	echo -e '\n Installing all Ubuntu apps\n'
+	echo -e '\n Installing all GNOME apps\n'
 	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
-	sudo apt install steam-installer -y
-	sudo apt install ffmpeg -y
-	sudo apt install git -y
-	sudo apt install mangohud -y
-	sudo apt install flatpak -y
-	sudo apt install timeshift -y
-	sudo apt install kwrite -y
-	sudo ubuntu-drivers install
+	sudo pacman -S steam --noconfirm
+	sudo pacman -S ffmpeg --noconfirm
+	sudo pacman -S git --noconfirm
+	sudo pacman -S mangohud --noconfirm
+	sudo pacman -S flatpak --noconfirm
+	sudo pacman -S timeshift --noconfirm
+	sudo systemctl enable --now cronie.service
 	just installs-common
-	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.videolan.VLC -y
 	flatpak install flathub org.mozilla.firefox -y
-	echo -e '\n All Ubuntu apps have been installed\n'
+	flatpak install flathub com.mattjakeman.ExtensionManager -y
+	echo -e '\n All GNOME apps have been installed\n'
 
 # Install Arch specific apps
 installs-arch:
@@ -63,7 +62,6 @@ installs-arch:
 
 	echo -e '\n Installing all Arch Linux apps\n'
 	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
-	sudo systemctl enable --now cronie.service NetworkManager.service
 	sudo pacman -S steam --noconfirm
 	sudo pacman -S ffmpeg --noconfirm
 	sudo pacman -S git --noconfirm
@@ -75,6 +73,7 @@ installs-arch:
 	sudo pacman -S spectacle --noconfirm
 	sudo pacman -S packagekit-qt6 --noconfirm
 	# sudo pacman -S ufw --noconfirm
+	sudo systemctl enable --now cronie.service NetworkManager.service
 	just installs-common
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.kde.gwenview -y
