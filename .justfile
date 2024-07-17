@@ -45,7 +45,6 @@ installs-gnome:
 	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
 	sudo pacman -S steam --noconfirm
 	sudo pacman -S ffmpeg --noconfirm
-	sudo pacman -S git --noconfirm
 	sudo pacman -S mangohud --noconfirm
 	sudo pacman -S flatpak --noconfirm
 	sudo pacman -S timeshift --noconfirm
@@ -64,14 +63,12 @@ installs-arch:
 	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
 	sudo pacman -S steam --noconfirm
 	sudo pacman -S ffmpeg --noconfirm
-	sudo pacman -S git --noconfirm
 	sudo pacman -S mangohud --noconfirm
 	sudo pacman -S firefox --noconfirm
 	sudo pacman -S flatpak --noconfirm
 	sudo pacman -S timeshift --noconfirm
 	sudo pacman -S spectacle --noconfirm
 	sudo pacman -S packagekit-qt6 --noconfirm
-	# sudo pacman -S ufw --noconfirm
 	sudo systemctl enable --now cronie.service NetworkManager.service
 	just installs-common
 	flatpak install flathub org.kde.okular -y
