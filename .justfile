@@ -52,7 +52,7 @@ installs-gnome:
 	sudo pacman -S wayland-protocols --noconfirm
 	sudo pacman -S noto-fonts --noconfirm
 	sudo pacman -S noto-fonts-cjk --noconfirm
-	sudo systemctl enable --now cronie.service
+	sudo systemctl enable --now cronie.service bluetooth.service
 	ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 	just installs-common
 	flatpak install flathub org.videolan.VLC -y
@@ -76,7 +76,7 @@ installs-arch:
 	sudo pacman -S spectacle --noconfirm
 	sudo pacman -S packagekit-qt6 --noconfirm
 	sudo pacman -S noto-fonts-cjk --noconfirm
-	sudo systemctl enable --now cronie.service NetworkManager.service
+	sudo systemctl enable --now cronie.service bluetooth.service NetworkManager.service
 	just installs-common
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.kde.gwenview -y
