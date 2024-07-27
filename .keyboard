@@ -1,14 +1,16 @@
-dolphin ~/.local/share/applications
-_launch=Meta+Shift+D
 
-flatpak run com.visualstudio.code .bash_aliases
-_launch=Meta+Shift+A
+  dolphin ~/.local/share/applications
+  launch = Meta + Shift + D
 
-flatpak run org.flameshot.Flameshot gui
-_launch=Meta+Shift+Print
+  flatpak run com.visualstudio.code .bash_aliases
+  launch = Meta + Shift + A
 
-kwrite ~/.config/MangoHud/MangoHud.conf
-_launch=Meta+Shift+H
+  flatpak run org.flameshot.Flameshot gui
+  launch = Meta + Shift + Print
 
-killall -SIGUSR1 gpu-screen-recorder
-_launch=*
+  kwrite ~/.config/MangoHud/MangoHud.conf
+  launch = Meta + Shift + H
+
+  killall -SIGUSR1 gpu-screen-recorder
+  launch = *
+
