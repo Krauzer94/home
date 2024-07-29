@@ -60,11 +60,11 @@ installs-gnome:
 	flatpak install flathub com.mattjakeman.ExtensionManager -y
 	echo -e '\n All GNOME apps have been installed\n'
 
-# Install Arch specific apps
-installs-arch:
+# Install Plasma specific apps
+installs-plasma:
 	#!/bin/bash
 
-	echo -e '\n Installing all Arch Linux apps\n'
+	echo -e '\n Installing all Plasma apps\n'
 	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
 	sudo pacman -S git --noconfirm
 	sudo pacman -S flatpak --noconfirm
@@ -81,7 +81,7 @@ installs-arch:
 	flatpak install flathub org.kde.okular -y
 	flatpak install flathub org.kde.gwenview -y
 	flatpak install flathub org.kde.kcalc -y
-	echo -e '\n All Arch Linux apps have been installed\n'
+	echo -e '\n All Plasma apps have been installed\n'
 
 # Set up git and GitHub account
 setup-github:
