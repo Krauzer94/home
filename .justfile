@@ -8,23 +8,30 @@ installs-common:
 	echo -e '\n Installing all common applications\n'
 	just installs-neofetch
 	just setup-filesys
-	flatpak install flathub com.google.Chrome -y
-	flatpak install flathub org.gimp.GIMP -y
-	flatpak install flathub org.qbittorrent.qBittorrent -y
-	flatpak install flathub org.flameshot.Flameshot -y
-	flatpak install flathub org.gnome.EasyTAG -y
-	flatpak install flathub com.stremio.Stremio -y
-	flatpak install flathub org.bleachbit.BleachBit -y
-	flatpak install flathub com.spotify.Client -y
-	flatpak install flathub org.libretro.RetroArch -y
-	flatpak install flathub org.onlyoffice.desktopeditors -y
-	flatpak install flathub com.discordapp.Discord -y
-	flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y
-	flatpak install flathub com.github.tchx84.Flatseal -y
-	flatpak install flathub net.davidotek.pupgui2 -y
-	flatpak install flathub net.lutris.Lutris -y
-	flatpak install flathub com.visualstudio.code -y
-	flatpak install flathub com.dec05eba.gpu_screen_recorder -y
+
+	apps=(
+		com.google.Chrome
+		org.gimp.GIMP
+		org.qbittorrent.qBittorrent
+		org.flameshot.Flameshot
+		org.gnome.EasyTAG
+		com.stremio.Stremio
+		org.bleachbit.BleachBit
+		com.spotify.Client
+		org.libretro.RetroArch
+		org.onlyoffice.desktopeditors
+		com.discordapp.Discord
+		io.github.mimbrero.WhatsAppDesktop
+		com.github.tchx84.Flatseal
+		net.davidotek.pupgui2
+		net.lutris.Lutris
+		com.visualstudio.code
+		com.dec05eba.gpu_screen_recorder
+	)
+	for app in "${apps[@]}"; do
+		flatpak install flathub "$app" -y
+	done
+
 	echo -e '\n All common applications have been installed\n'
 
 # Install SteamOS specific apps
