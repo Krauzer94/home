@@ -43,15 +43,15 @@ installs-gnome:
 
 	echo -e '\n Installing all GNOME apps\n'
 	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
-	sudo pacman -S git --noconfirm
-	sudo pacman -S flatpak --noconfirm
-	sudo pacman -S timeshift --noconfirm
-	sudo pacman -S steam --noconfirm
-	sudo pacman -S ffmpeg --noconfirm
-	sudo pacman -S mangohud --noconfirm
-	sudo pacman -S wayland-protocols --noconfirm
-	sudo pacman -S noto-fonts --noconfirm
-	sudo pacman -S noto-fonts-cjk --noconfirm
+
+	packages=(
+		git flatpak timeshift steam ffmpeg mangohud
+		wayland-protocols noto-fonts noto-fonts-cjk
+	)
+	for package in "${packages[@]}"; do
+		sudo pacman -S "$package" --noconfirm
+	done
+
 	sudo systemctl enable --now cronie.service bluetooth.service
 	sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 	just installs-common
@@ -66,16 +66,15 @@ installs-plasma:
 
 	echo -e '\n Installing all Plasma apps\n'
 	flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud
-	sudo pacman -S git --noconfirm
-	sudo pacman -S flatpak --noconfirm
-	sudo pacman -S timeshift --noconfirm
-	sudo pacman -S steam --noconfirm
-	sudo pacman -S ffmpeg --noconfirm
-	sudo pacman -S mangohud --noconfirm
-	sudo pacman -S firefox --noconfirm
-	sudo pacman -S spectacle --noconfirm
-	sudo pacman -S packagekit-qt6 --noconfirm
-	sudo pacman -S noto-fonts-cjk --noconfirm
+
+	packages=(
+		git flatpak timeshift steam ffmpeg mangohud
+		firefox spectacle packagekit-qt6 noto-fonts-cjk
+	)
+	for package in "${packages[@]}"; do
+		sudo pacman -S "$package" --noconfirm
+	done
+
 	sudo systemctl enable --now cronie.service bluetooth.service NetworkManager.service
 	just installs-common
 	flatpak install flathub org.kde.okular -y
