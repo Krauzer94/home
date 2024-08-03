@@ -53,7 +53,7 @@ installs-gnome:
 	sudo pacman -S noto-fonts --noconfirm
 	sudo pacman -S noto-fonts-cjk --noconfirm
 	sudo systemctl enable --now cronie.service bluetooth.service
-	ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
+	sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 	just installs-common
 	flatpak install flathub org.videolan.VLC -y
 	flatpak install flathub org.mozilla.firefox -y
