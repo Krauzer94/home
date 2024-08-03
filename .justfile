@@ -118,12 +118,19 @@ setup-filesys:
 	mkdir $HOME/.icons
 	cp -r /usr/share/themes/* $HOME/.themes/
 	cp -r /usr/share/icons/* $HOME/.icons/
-	flatpak override --user --filesystem=$HOME/.themes
-	flatpak override --user --filesystem=$HOME/.icons
-	flatpak override --user --filesystem=$HOME/Music
-	flatpak override --user --filesystem=$HOME/Games
-	flatpak override --user --filesystem=xdg-config/gtk-3.0:ro
-	flatpak override --user --filesystem=xdg-config/MangoHud:ro
+
+	directories=(
+		"$HOME/.themes"
+		"$HOME/.icons"
+		"$HOME/Music"
+		"$HOME/Games"
+		"xdg-config/gtk-3.0:ro"
+		"xdg-config/MangoHud:ro"
+	)
+	for dir in "${directories[@]}"; do
+		flatpak override --user --filesystem=$dir
+	done
+
 	echo -e '\n Finished applying flatpak permissions\n'
 
 # Upload savegame folder files
