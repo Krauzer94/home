@@ -1,0 +1,6 @@
+dir: ~/.local/share
+1. /Cemu
+
+dir: ~/.config
+1. /glib-2.0
+2. /Cemu
