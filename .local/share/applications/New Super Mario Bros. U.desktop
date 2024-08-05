@@ -1,0 +1,29 @@
+[Desktop Entry]
+Name=New Super Mario Bros. U
+Type=Application
+Terminal=false
+Icon=info.cemu.Cemu
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/Cemu-wrapper info.cemu.Cemu -f -g /home/deck/Games/Game.wux
+#GenericName=Wii U Emulator
+GenericName=Play this game on Cemu
+GenericName[fi]=Wii U -emulaattori
+GenericName[el]=Πρόγραμμα προσομοίωσης Wii U
+GenericName[es]=Emulador de Wii U
+GenericName[pt_BR]=Emulador de Wii U
+GenericName[fr]=Émulateur de Wii U
+GenericName[it]=Emulatore Wii U
+Comment=Software to emulate Wii U games and applications on PC
+Comment[fi]=Ohjelmisto Wii U -pelien ja sovellusten emulointiin PC:lla
+Comment[de]=Software zum emulieren von Wii U Spielen und Anwendungen auf dem PC
+Comment[ru]=Программа для эмуляции игр и приложений Wii U на PC
+Comment[fr]=Application pour émuler des jeux et des applications Wii U sur PC
+Comment[nl]=Applicatie om Wii U spellen en applicaties te emuleren op PC
+Comment[el]=Πρόγραμμα προσομοίωσης παιχνιδιών και εφαρμογών Wii U στον υπολογιστή
+Comment[es]=Software para emular juegos y aplicaciones de Wii U en PC
+Comment[pt_BR]=Software para emular jogos e aplicativos de Wii U no PC
+Comment[it]=Software per emulare giochi e applicazioni per Wii U su PC
+Categories=Game;Emulator;
+Keywords=Nintendo;
+MimeType=application/x-wii-u-rom;
+X-Desktop-File-Install-Version=0.27
+X-Flatpak=info.cemu.Cemu
