@@ -2,9 +2,10 @@
 Name=New Super Mario Bros. U
 Type=Application
 Terminal=false
-Icon=info.cemu.Cemu
+# Icon=info.cemu.Cemu
+Icon=/home/deck/Games/Media/Icon.png
 Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/Cemu-wrapper info.cemu.Cemu -f -g /home/deck/Games/Game.wux
-#GenericName=Wii U Emulator
+# GenericName=Wii U Emulator
 GenericName=Play this game on Cemu
 GenericName[fi]=Wii U -emulaattori
 GenericName[el]=Πρόγραμμα προσομοίωσης Wii U
