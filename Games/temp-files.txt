@@ -1,3 +1,4 @@
 /home/deck/.local/share/Cemu
 /home/deck/.config/glib-2.0
 /home/deck/.config/Cemu
+/home/deck/.cache/Cemu
